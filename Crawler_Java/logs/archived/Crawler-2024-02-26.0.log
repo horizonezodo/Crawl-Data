@@ -1,0 +1,96 @@
+2024-02-26 15:35:21,415 INFO org.springframework.boot.StartupInfoLogger [main] Starting NewAppApplication using Java 11.0.19 on dev-HP-Laptop-14-bs1xx with PID 6488 (/home/dev/Java_Python/Crawler_Java/target/classes started by dev in /home/dev/Java_Python/Crawler_Java)
+2024-02-26 15:35:21,419 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-02-26 15:35:22,052 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-26 15:35:22,113 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2024-02-26 15:35:22,733 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8890 (http)
+2024-02-26 15:35:22,734 INFO org.apache.juli.logging.DirectJDKLog [main] An older version [1.2.21] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2024-02-26 15:35:22,735 INFO org.apache.juli.logging.DirectJDKLog [main] Loaded Apache Tomcat Native library [1.2.21] using APR version [1.6.3].
+2024-02-26 15:35:22,735 INFO org.apache.juli.logging.DirectJDKLog [main] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2024-02-26 15:35:22,735 INFO org.apache.juli.logging.DirectJDKLog [main] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-02-26 15:35:22,740 INFO org.apache.juli.logging.DirectJDKLog [main] OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+2024-02-26 15:35:22,747 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8890"]
+2024-02-26 15:35:22,749 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2024-02-26 15:35:22,749 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.76]
+2024-02-26 15:35:22,852 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-02-26 15:35:22,853 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1386 ms
+2024-02-26 15:35:23,059 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-26 15:35:23,103 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-02-26 15:35:23,285 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-02-26 15:35:23,382 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-02-26 15:35:23,556 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-02-26 15:35:23,572 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2024-02-26 15:35:24,162 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-02-26 15:35:24,171 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-26 15:35:24,798 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-26 15:35:25,015 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@52d01430, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3fdede3a, org.springframework.security.web.context.SecurityContextPersistenceFilter@43efe064, org.springframework.security.web.header.HeaderWriterFilter@5020b59f, org.springframework.web.filter.CorsFilter@41948c13, org.springframework.security.web.authentication.logout.LogoutFilter@41b2123e, com.example.newapp.jwt.AuthTokenFilter@2568611c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c6a6ce3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4e3a6c83, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3085befb, org.springframework.security.web.session.SessionManagementFilter@584fb03d, org.springframework.security.web.access.ExceptionTranslationFilter@19855799, org.springframework.security.web.access.intercept.AuthorizationFilter@cbc3bf3]
+2024-02-26 15:35:25,259 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8890"]
+2024-02-26 15:35:25,277 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8890 (http) with context path ''
+2024-02-26 15:35:25,287 INFO org.springframework.boot.StartupInfoLogger [main] Started NewAppApplication in 4.367 seconds (JVM running for 5.02)
+2024-02-26 16:52:29,876 INFO org.springframework.boot.StartupInfoLogger [main] Starting NewAppApplication using Java 11.0.19 on dev-HP-Laptop-14-bs1xx with PID 11045 (/home/dev/Java_Python/Crawler_Java/target/classes started by dev in /home/dev/Java_Python/Crawler_Java)
+2024-02-26 16:52:29,879 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-02-26 16:52:30,516 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-26 16:52:30,571 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 45 ms. Found 3 JPA repository interfaces.
+2024-02-26 16:52:31,104 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8890 (http)
+2024-02-26 16:52:31,105 INFO org.apache.juli.logging.DirectJDKLog [main] An older version [1.2.21] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2024-02-26 16:52:31,105 INFO org.apache.juli.logging.DirectJDKLog [main] Loaded Apache Tomcat Native library [1.2.21] using APR version [1.6.3].
+2024-02-26 16:52:31,105 INFO org.apache.juli.logging.DirectJDKLog [main] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2024-02-26 16:52:31,105 INFO org.apache.juli.logging.DirectJDKLog [main] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-02-26 16:52:31,110 INFO org.apache.juli.logging.DirectJDKLog [main] OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+2024-02-26 16:52:31,117 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8890"]
+2024-02-26 16:52:31,119 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2024-02-26 16:52:31,119 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.76]
+2024-02-26 16:52:31,213 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-02-26 16:52:31,213 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1294 ms
+2024-02-26 16:52:31,398 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-26 16:52:31,456 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-02-26 16:52:31,641 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-02-26 16:52:31,739 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-02-26 16:52:31,912 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-02-26 16:52:31,929 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2024-02-26 16:52:32,486 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-02-26 16:52:32,496 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-26 16:52:33,129 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-26 16:52:33,337 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@41948c13, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3085befb, org.springframework.security.web.context.SecurityContextPersistenceFilter@2c6a6ce3, org.springframework.security.web.header.HeaderWriterFilter@46d18a33, org.springframework.web.filter.CorsFilter@62264d4f, org.springframework.security.web.authentication.logout.LogoutFilter@5e9671e6, com.example.newapp.jwt.AuthTokenFilter@4e1b5532, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e3a6c83, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74faf450, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2bc0603f, org.springframework.security.web.session.SessionManagementFilter@52d181ed, org.springframework.security.web.access.ExceptionTranslationFilter@5020b59f, org.springframework.security.web.access.intercept.AuthorizationFilter@7730da00]
+2024-02-26 16:52:33,563 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8890"]
+2024-02-26 16:52:33,569 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8890 is already in use
+2024-02-26 16:52:33,573 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-26 16:52:33,575 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2024-02-26 16:52:33,585 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2024-02-26 16:52:33,587 INFO org.apache.juli.logging.DirectJDKLog [main] Pausing ProtocolHandler ["http-nio-8890"]
+2024-02-26 16:52:33,588 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
+2024-02-26 16:52:33,591 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping ProtocolHandler ["http-nio-8890"]
+2024-02-26 16:52:33,592 INFO org.apache.juli.logging.DirectJDKLog [main] Destroying ProtocolHandler ["http-nio-8890"]
+2024-02-26 16:52:33,600 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-02-26 16:52:33,618 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8890 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8890 or configure this application to listen on another port.
+
+2024-02-26 17:00:17,767 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(94)-127.0.0.1] Application shutdown requested.
+2024-02-26 17:00:17,774 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(94)-127.0.0.1] Pausing ProtocolHandler ["http-nio-8890"]
+2024-02-26 17:00:17,775 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(94)-127.0.0.1] Stopping service [Tomcat]
+2024-02-26 17:00:17,780 WARN org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(94)-127.0.0.1] The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.19/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.19/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.19/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.19/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.19/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.19/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.19/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.19/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.19/java.lang.Thread.run(Thread.java:829)
+2024-02-26 17:00:17,781 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(94)-127.0.0.1] Stopping ProtocolHandler ["http-nio-8890"]
+2024-02-26 17:00:17,789 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(94)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-26 17:00:17,791 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(94)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2024-02-26 17:00:17,794 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(94)-127.0.0.1] HikariPool-1 - Shutdown completed.

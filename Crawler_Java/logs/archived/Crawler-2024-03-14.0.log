@@ -1,0 +1,158 @@
+2024-03-14 15:29:44,739 INFO org.springframework.boot.StartupInfoLogger [main] Starting NewAppApplication using Java 11.0.19 on dev-HP-Laptop-14-bs1xx with PID 13187 (/home/dev/Java_Python/Crawler_Java/target/classes started by dev in /home/dev/Java_Python/Crawler_Java)
+2024-03-14 15:29:44,743 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-03-14 15:29:45,434 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-14 15:29:45,502 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 58 ms. Found 4 JPA repository interfaces.
+2024-03-14 15:29:46,155 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8890 (http)
+2024-03-14 15:29:46,157 INFO org.apache.juli.logging.DirectJDKLog [main] An older version [1.2.21] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2024-03-14 15:29:46,157 INFO org.apache.juli.logging.DirectJDKLog [main] Loaded Apache Tomcat Native library [1.2.21] using APR version [1.6.3].
+2024-03-14 15:29:46,157 INFO org.apache.juli.logging.DirectJDKLog [main] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2024-03-14 15:29:46,157 INFO org.apache.juli.logging.DirectJDKLog [main] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-03-14 15:29:46,176 INFO org.apache.juli.logging.DirectJDKLog [main] OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+2024-03-14 15:29:46,185 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8890"]
+2024-03-14 15:29:46,186 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2024-03-14 15:29:46,187 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.76]
+2024-03-14 15:29:46,288 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-03-14 15:29:46,288 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1500 ms
+2024-03-14 15:29:46,492 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-14 15:29:46,539 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-03-14 15:29:46,702 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-14 15:29:46,789 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-03-14 15:29:46,978 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-03-14 15:29:46,990 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2024-03-14 15:29:47,614 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-14 15:29:47,624 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-14 15:29:48,355 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-14 15:29:48,575 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@37d3e740, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5afba80c, org.springframework.security.web.context.SecurityContextPersistenceFilter@21948bd1, org.springframework.security.web.header.HeaderWriterFilter@4ddb9a8, org.springframework.web.filter.CorsFilter@c4ca86a, org.springframework.security.web.authentication.logout.LogoutFilter@44ec4a38, com.example.newapp.jwt.AuthTokenFilter@22105c76, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@630febd7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@408d12fc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e741d6b, org.springframework.security.web.session.SessionManagementFilter@712e4b18, org.springframework.security.web.access.ExceptionTranslationFilter@55cc4c61, org.springframework.security.web.access.intercept.AuthorizationFilter@6ba0dcba]
+2024-03-14 15:29:48,799 INFO org.quartz.impl.StdSchedulerFactory [main] Using default implementation for ThreadExecutor
+2024-03-14 15:29:48,813 INFO org.quartz.core.SchedulerSignalerImpl [main] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-03-14 15:29:48,813 INFO org.quartz.core.QuartzScheduler [main] Quartz Scheduler v.2.3.2 created.
+2024-03-14 15:29:48,814 INFO org.quartz.simpl.RAMJobStore [main] RAMJobStore initialized.
+2024-03-14 15:29:48,815 INFO org.quartz.core.QuartzScheduler [main] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2024-03-14 15:29:48,815 INFO org.quartz.impl.StdSchedulerFactory [main] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2024-03-14 15:29:48,815 INFO org.quartz.impl.StdSchedulerFactory [main] Quartz scheduler version: 2.3.2
+2024-03-14 15:29:48,816 INFO org.quartz.core.QuartzScheduler [main] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@64f2b1b4
+2024-03-14 15:29:48,890 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8890"]
+2024-03-14 15:29:48,909 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8890 (http) with context path ''
+2024-03-14 15:29:48,910 INFO org.springframework.scheduling.quartz.SchedulerFactoryBean [main] Starting Quartz Scheduler now
+2024-03-14 15:29:48,910 INFO org.quartz.core.QuartzScheduler [main] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2024-03-14 15:29:48,918 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] Run Job
+2024-03-14 15:29:48,921 INFO org.springframework.boot.StartupInfoLogger [main] Started NewAppApplication in 4.651 seconds (JVM running for 5.237)
+2024-03-14 15:29:49,052 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] /home/dev/Downloads/uploads/nhadat24.py
+2024-03-14 15:29:55,702 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] 2024-03-12T00:00:06
+2024-03-14 15:29:55,758 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] 1
+2024-03-14 15:29:55,758 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] /home/dev/Downloads/uploads/cenhomes.py
+2024-03-14 15:30:02,432 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] 2024-03-11T11:24:44
+2024-03-14 15:30:02,475 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] 1
+2024-03-14 15:30:02,476 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] /home/dev/Downloads/uploads/homdySpider.py
+2024-03-14 15:30:08,223 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] 2024-03-12T00:10:21
+2024-03-14 15:30:08,238 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] 1
+2024-03-14 15:30:08,239 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] /home/dev/Downloads/uploads/bds123Spider.py
+2024-03-14 15:30:13,876 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] 2024-03-06T13:06:15
+2024-03-14 15:30:13,898 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] 1
+2024-03-14 15:30:13,898 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] /home/dev/Downloads/uploads/mogiSpider.py
+2024-03-14 15:30:18,686 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] 2024-03-08T08:58:22
+2024-03-14 15:30:18,702 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] 1
+2024-03-14 15:30:18,704 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] /home/dev/Downloads/uploads/nhaDatCafelandSpider.py
+2024-03-14 15:30:23,629 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] 2024-03-08T16:38:46
+2024-03-14 15:30:23,653 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] 1
+2024-03-14 15:30:23,653 INFO com.example.newapp.Job.AutoCrawlData [scheduling-1] /home/dev/Downloads/uploads/housevietSpider.py
+2024-03-14 15:34:33,555 INFO org.springframework.boot.StartupInfoLogger [main] Starting NewAppApplication using Java 11.0.19 on dev-HP-Laptop-14-bs1xx with PID 13777 (/home/dev/Java_Python/Crawler_Java/target/classes started by dev in /home/dev/Java_Python/Crawler_Java)
+2024-03-14 15:34:33,559 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-03-14 15:34:34,396 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-14 15:34:34,462 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
+2024-03-14 15:34:35,204 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8890 (http)
+2024-03-14 15:34:35,205 INFO org.apache.juli.logging.DirectJDKLog [main] An older version [1.2.21] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.30]
+2024-03-14 15:34:35,206 INFO org.apache.juli.logging.DirectJDKLog [main] Loaded Apache Tomcat Native library [1.2.21] using APR version [1.6.3].
+2024-03-14 15:34:35,206 INFO org.apache.juli.logging.DirectJDKLog [main] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2024-03-14 15:34:35,207 INFO org.apache.juli.logging.DirectJDKLog [main] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-03-14 15:34:35,220 INFO org.apache.juli.logging.DirectJDKLog [main] OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+2024-03-14 15:34:35,236 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8890"]
+2024-03-14 15:34:35,238 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2024-03-14 15:34:35,239 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.76]
+2024-03-14 15:34:35,352 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-03-14 15:34:35,352 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1744 ms
+2024-03-14 15:34:35,587 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-14 15:34:35,655 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-03-14 15:34:35,876 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-14 15:34:35,982 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-03-14 15:34:36,177 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-03-14 15:34:36,195 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2024-03-14 15:34:36,863 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-14 15:34:36,878 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-14 15:34:37,652 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-14 15:34:37,915 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@c4ca86a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e741d6b, org.springframework.security.web.context.SecurityContextPersistenceFilter@630febd7, org.springframework.security.web.header.HeaderWriterFilter@4c3c31a5, org.springframework.web.filter.CorsFilter@56351c02, org.springframework.security.web.authentication.logout.LogoutFilter@1756a471, com.example.newapp.jwt.AuthTokenFilter@2336d3f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@408d12fc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@759b05d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51097500, org.springframework.security.web.session.SessionManagementFilter@27d0376f, org.springframework.security.web.access.ExceptionTranslationFilter@4ddb9a8, org.springframework.security.web.access.intercept.AuthorizationFilter@38394e76]
+2024-03-14 15:34:38,217 INFO org.quartz.impl.StdSchedulerFactory [main] Using default implementation for ThreadExecutor
+2024-03-14 15:34:38,232 INFO org.quartz.core.SchedulerSignalerImpl [main] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-03-14 15:34:38,233 INFO org.quartz.core.QuartzScheduler [main] Quartz Scheduler v.2.3.2 created.
+2024-03-14 15:34:38,233 INFO org.quartz.simpl.RAMJobStore [main] RAMJobStore initialized.
+2024-03-14 15:34:38,234 INFO org.quartz.core.QuartzScheduler [main] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2024-03-14 15:34:38,235 INFO org.quartz.impl.StdSchedulerFactory [main] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2024-03-14 15:34:38,235 INFO org.quartz.impl.StdSchedulerFactory [main] Quartz scheduler version: 2.3.2
+2024-03-14 15:34:38,235 INFO org.quartz.core.QuartzScheduler [main] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@4b808427
+2024-03-14 15:34:38,337 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8890"]
+2024-03-14 15:34:38,350 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8890 is already in use
+2024-03-14 15:34:38,351 INFO org.springframework.scheduling.quartz.SchedulerFactoryBean [main] Shutting down Quartz Scheduler
+2024-03-14 15:34:38,351 INFO org.quartz.core.QuartzScheduler [main] Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2024-03-14 15:34:38,351 INFO org.quartz.core.QuartzScheduler [main] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-03-14 15:34:38,352 INFO org.quartz.core.QuartzScheduler [main] Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2024-03-14 15:34:38,358 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-14 15:34:38,362 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2024-03-14 15:34:38,378 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2024-03-14 15:34:38,380 INFO org.apache.juli.logging.DirectJDKLog [main] Pausing ProtocolHandler ["http-nio-8890"]
+2024-03-14 15:34:38,381 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
+2024-03-14 15:34:38,385 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping ProtocolHandler ["http-nio-8890"]
+2024-03-14 15:34:38,386 INFO org.apache.juli.logging.DirectJDKLog [main] Destroying ProtocolHandler ["http-nio-8890"]
+2024-03-14 15:34:38,394 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-03-14 15:34:38,418 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8890 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8890 or configure this application to listen on another port.
+
+2024-03-14 15:37:01,772 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(17)-127.0.0.1] Application shutdown requested.
+2024-03-14 15:37:01,781 INFO org.quartz.core.QuartzScheduler [RMI TCP Connection(17)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-03-14 15:37:01,801 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(17)-127.0.0.1] Pausing ProtocolHandler ["http-nio-8890"]
+2024-03-14 15:37:01,802 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(17)-127.0.0.1] Stopping service [Tomcat]
+2024-03-14 15:37:01,823 WARN org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(17)-127.0.0.1] The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.19/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.19/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.19/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.19/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.19/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.19/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.19/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.19/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.19/java.lang.Thread.run(Thread.java:829)
+2024-03-14 15:37:01,825 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(17)-127.0.0.1] Stopping ProtocolHandler ["http-nio-8890"]
+2024-03-14 15:37:01,834 INFO org.apache.juli.logging.DirectJDKLog [RMI TCP Connection(17)-127.0.0.1] Destroying ProtocolHandler ["http-nio-8890"]
+2024-03-14 15:37:01,840 INFO org.springframework.scheduling.quartz.SchedulerFactoryBean [RMI TCP Connection(17)-127.0.0.1] Shutting down Quartz Scheduler
+2024-03-14 15:37:01,841 INFO org.quartz.core.QuartzScheduler [RMI TCP Connection(17)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2024-03-14 15:37:01,841 INFO org.quartz.core.QuartzScheduler [RMI TCP Connection(17)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-03-14 15:37:01,842 INFO org.quartz.core.QuartzScheduler [RMI TCP Connection(17)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2024-03-14 15:37:01,847 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(17)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-14 15:37:01,851 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(17)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2024-03-14 15:37:01,876 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(17)-127.0.0.1] HikariPool-1 - Shutdown completed.

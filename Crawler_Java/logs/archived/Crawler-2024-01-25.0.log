@@ -1,0 +1,50 @@
+2024-01-25 10:54:59,010 INFO org.springframework.boot.StartupInfoLogger [main] Starting NewAppApplication using Java 11.0.17 on DESKTOP-47TVEOI with PID 6856 (E:\Spring\Crawler\target\classes started by thien in E:\Spring\Crawler)
+2024-01-25 10:54:59,016 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-25 10:54:59,684 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-25 10:54:59,728 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces.
+2024-01-25 10:55:00,166 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8890 (http)
+2024-01-25 10:55:00,170 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8890"]
+2024-01-25 10:55:00,171 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2024-01-25 10:55:00,171 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.76]
+2024-01-25 10:55:00,255 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-01-25 10:55:00,255 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1193 ms
+2024-01-25 10:55:00,372 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-25 10:55:00,424 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-01-25 10:55:00,522 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-25 10:55:00,591 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-01-25 10:55:00,750 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-01-25 10:55:00,768 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2024-01-25 10:55:01,327 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-25 10:55:01,336 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-25 10:55:01,602 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-25 10:55:01,863 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8890"]
+2024-01-25 10:55:01,879 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8890 (http) with context path ''
+2024-01-25 10:55:01,889 INFO org.springframework.boot.StartupInfoLogger [main] Started NewAppApplication in 3.534 seconds (JVM running for 5.11)
+2024-01-25 10:55:07,917 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8890-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-25 10:55:07,918 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8890-exec-2] Initializing Servlet 'dispatcherServlet'
+2024-01-25 10:55:07,919 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8890-exec-2] Completed initialization in 1 ms
+2024-01-25 11:58:46,723 INFO org.springframework.boot.StartupInfoLogger [main] Starting NewAppApplication using Java 11.0.17 on DESKTOP-47TVEOI with PID 12932 (E:\Spring\Crawler\target\classes started by thien in E:\Spring\Crawler)
+2024-01-25 11:58:46,726 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-25 11:58:47,542 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-25 11:58:47,582 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
+2024-01-25 11:58:47,980 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8890 (http)
+2024-01-25 11:58:47,993 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8890"]
+2024-01-25 11:58:47,993 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2024-01-25 11:58:47,993 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.76]
+2024-01-25 11:58:48,198 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-01-25 11:58:48,199 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1414 ms
+2024-01-25 11:58:48,359 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-25 11:58:48,406 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-01-25 11:58:48,526 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-25 11:58:48,638 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-01-25 11:58:48,755 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-01-25 11:58:48,767 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2024-01-25 11:58:49,275 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-25 11:58:49,283 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-25 11:58:49,552 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-25 11:58:49,883 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8890"]
+2024-01-25 11:58:49,905 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8890 (http) with context path ''
+2024-01-25 11:58:49,913 INFO org.springframework.boot.StartupInfoLogger [main] Started NewAppApplication in 3.675 seconds (JVM running for 4.625)
+2024-01-25 11:58:57,944 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8890-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-25 11:58:57,945 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8890-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-01-25 11:58:57,946 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8890-exec-1] Completed initialization in 0 ms

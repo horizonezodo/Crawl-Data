@@ -1,0 +1,856 @@
+2024-01-30 09:46:54,088 INFO org.springframework.boot.StartupInfoLogger [main] Starting NewAppApplication using Java 17.0.10 on dev-HP-Laptop-14-bs1xx with PID 6199 (/home/dev/Java_Python/Crawler_Java/target/classes started by dev in /home/dev/Java_Python/Crawler_Java)
+2024-01-30 09:46:54,091 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-30 09:46:54,647 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-30 09:46:54,712 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interfaces.
+2024-01-30 09:46:55,132 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8888 (http)
+2024-01-30 09:46:55,140 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8888"]
+2024-01-30 09:46:55,142 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2024-01-30 09:46:55,142 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.76]
+2024-01-30 09:46:55,226 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-01-30 09:46:55,226 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1072 ms
+2024-01-30 09:46:55,386 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-30 09:46:55,426 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-01-30 09:46:55,544 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-30 09:46:55,620 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-01-30 09:46:55,771 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-01-30 09:46:55,782 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2024-01-30 09:46:56,238 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-30 09:46:56,247 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-30 09:46:56,713 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-30 09:46:57,243 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8888"]
+2024-01-30 09:46:57,397 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8888 (http) with context path ''
+2024-01-30 09:46:57,439 INFO org.springframework.boot.StartupInfoLogger [main] Started NewAppApplication in 3.826 seconds (JVM running for 4.557)
+2024-01-30 09:47:27,688 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-30 09:47:27,689 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8888-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-01-30 09:47:27,690 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8888-exec-1] Completed initialization in 1 ms
+2024-01-30 09:47:27,836 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] Run python script exit code : 1
+2024-01-30 09:47:27,836 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]   File "/home/dev/Downloads/crawler/crawler/spiders/runMethod.py", line 35
+2024-01-30 09:47:27,836 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] SyntaxError: Non-ASCII character '\xe1' in file /home/dev/Downloads/crawler/crawler/spiders/runMethod.py on line 35, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2024-01-30 09:47:27,842 ERROR com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] Run python script code in cmd Fail : 
+2024-01-30 09:48:09,642 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-4] Run python script exit code : 1
+2024-01-30 09:48:09,642 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-4] Hello
+2024-01-30 09:48:09,643 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-4] Traceback (most recent call last):
+2024-01-30 09:48:09,643 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-4]   File "/home/dev/Downloads/crawler/crawler/spiders/runMethod.py", line 35, in <module>
+2024-01-30 09:48:09,643 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-4]     result = subprocess.run(['python', path_to_script, json_file_path], capture_output=True, text=True)
+2024-01-30 09:48:09,643 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-4] AttributeError: 'module' object has no attribute 'run'
+2024-01-30 09:48:09,645 ERROR com.example.newapp.controll.WebsiteController [http-nio-8888-exec-4] Run python script code in cmd Fail : 
+2024-01-30 09:50:25,854 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-6] Run python script exit code : 1
+2024-01-30 09:50:25,855 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-6] Traceback (most recent call last):
+2024-01-30 09:50:25,855 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-6]   File "/home/dev/Downloads/crawler/crawler/spiders/run_scrawler.py", line 8, in <module>
+2024-01-30 09:50:25,856 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-6]     from scrapy.crawler import CrawlerProcess
+2024-01-30 09:50:25,856 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-6] ImportError: No module named scrapy.crawler
+2024-01-30 09:50:25,856 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-6] Hello
+2024-01-30 09:50:25,857 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-6] Traceback (most recent call last):
+2024-01-30 09:50:25,857 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-6]   File "/home/dev/Downloads/crawler/crawler/spiders/runMethod.py", line 37, in <module>
+2024-01-30 09:50:25,857 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-6]     print('Exit Code:', result.returncode)
+2024-01-30 09:50:25,858 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-6] AttributeError: 'int' object has no attribute 'returncode'
+2024-01-30 09:50:25,859 ERROR com.example.newapp.controll.WebsiteController [http-nio-8888-exec-6] Run python script code in cmd Fail : 
+2024-01-30 09:51:12,801 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-7] Run python script exit code : 0
+2024-01-30 09:51:12,801 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-7] Traceback (most recent call last):
+2024-01-30 09:51:12,802 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-7]   File "/home/dev/Downloads/crawler/crawler/spiders/run_scrawler.py", line 8, in <module>
+2024-01-30 09:51:12,802 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-7]     from scrapy.crawler import CrawlerProcess
+2024-01-30 09:51:12,802 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-7] ImportError: No module named scrapy.crawler
+2024-01-30 09:51:12,802 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-7] Hello
+2024-01-30 09:51:12,804 ERROR com.example.newapp.controll.WebsiteController [http-nio-8888-exec-7] Run python script code in cmd Fail : 
+2024-01-30 09:51:25,756 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-10] Run python script exit code : 0
+2024-01-30 09:51:25,756 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-10] Traceback (most recent call last):
+2024-01-30 09:51:25,757 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-10]   File "/home/dev/Downloads/crawler/crawler/spiders/run_scrawler.py", line 8, in <module>
+2024-01-30 09:51:25,757 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-10]     from scrapy.crawler import CrawlerProcess
+2024-01-30 09:51:25,757 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-10] ImportError: No module named scrapy.crawler
+2024-01-30 09:51:25,757 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-10] Hello
+2024-01-30 09:51:25,758 ERROR com.example.newapp.controll.WebsiteController [http-nio-8888-exec-10] Run python script code in cmd Fail : 
+2024-01-30 09:52:24,119 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] Run python script exit code : 0
+2024-01-30 09:52:24,119 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.utils.log] INFO: Scrapy 2.11.0 started (bot: scrapybot)
+2024-01-30 09:52:24,119 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.utils.log] INFO: Versions: lxml 5.1.0.0, libxml2 2.12.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.8.0 (default, Dec  9 2021, 17:53:27) - [GCC 8.4.0], pyOpenSSL 24.0.0 (OpenSSL 3.2.0 23 Nov 2023), cryptography 42.0.1, Platform Linux-5.4.0-150-generic-x86_64-with-glibc2.27
+2024-01-30 09:52:24,120 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.addons] INFO: Enabled addons:
+2024-01-30 09:52:24,120 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] []
+2024-01-30 09:52:24,120 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [py.warnings] WARNING: /home/dev/Downloads/crawler/venv/lib/python3.8/site-packages/scrapy/utils/request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+2024-01-30 09:52:24,120 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 
+2024-01-30 09:52:24,120 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+2024-01-30 09:52:24,120 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 
+2024-01-30 09:52:24,120 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+2024-01-30 09:52:24,121 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]   return cls(crawler)
+2024-01-30 09:52:24,121 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 
+2024-01-30 09:52:24,121 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2024-01-30 09:52:24,121 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.extensions.telnet] INFO: Telnet Password: 8614dba553a5a06d
+2024-01-30 09:52:24,121 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [py.warnings] WARNING: /home/dev/Downloads/crawler/venv/lib/python3.8/site-packages/scrapy/extensions/feedexport.py:406: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+2024-01-30 09:52:24,121 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]   exporter = cls(crawler)
+2024-01-30 09:52:24,122 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 
+2024-01-30 09:52:24,122 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.middleware] INFO: Enabled extensions:
+2024-01-30 09:52:24,122 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] ['scrapy.extensions.corestats.CoreStats',
+2024-01-30 09:52:24,123 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scrapy.extensions.telnet.TelnetConsole',
+2024-01-30 09:52:24,123 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scrapy.extensions.memusage.MemoryUsage',
+2024-01-30 09:52:24,123 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scrapy.extensions.feedexport.FeedExporter',
+2024-01-30 09:52:24,123 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scrapy.extensions.logstats.LogStats']
+2024-01-30 09:52:24,124 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.crawler] INFO: Overridden settings:
+2024-01-30 09:52:24,124 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'USER_AGENT': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)'}
+2024-01-30 09:52:24,124 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2024-01-30 09:52:24,124 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] ['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+2024-01-30 09:52:24,124 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+2024-01-30 09:52:24,124 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+2024-01-30 09:52:24,124 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+2024-01-30 09:52:24,125 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+2024-01-30 09:52:24,125 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+2024-01-30 09:52:24,125 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+2024-01-30 09:52:24,125 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+2024-01-30 09:52:24,125 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+2024-01-30 09:52:24,125 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+2024-01-30 09:52:24,125 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2024-01-30 09:52:24,126 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.middleware] INFO: Enabled spider middlewares:
+2024-01-30 09:52:24,126 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+2024-01-30 09:52:24,126 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+2024-01-30 09:52:24,126 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scrapy.spidermiddlewares.referer.RefererMiddleware',
+2024-01-30 09:52:24,126 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+2024-01-30 09:52:24,126 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2024-01-30 09:52:24,126 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.middleware] INFO: Enabled item pipelines:
+2024-01-30 09:52:24,127 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] []
+2024-01-30 09:52:24,127 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.engine] INFO: Spider opened
+2024-01-30 09:52:24,127 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2024-01-30 09:52:24,127 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2024-01-30 09:52:24,127 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://vnexpress.net/> (referer: None)
+2024-01-30 09:52:24,127 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,128 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'TS Trần Hữu Minh, Chánh văn phòng Ủy ban An toàn giao thông '
+2024-01-30 09:52:24,128 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'quốc gia, cho rằng cần xử lý hình sự tài xế vi phạm nồng độ '
+2024-01-30 09:52:24,128 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'cồn vượt mức 3 dù chưa gây hậu quả.',
+2024-01-30 09:52:24,129 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,129 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': 'Đề xuất xử lý hình sự tài xế có nồng độ cồn mức cao'}
+2024-01-30 09:52:24,129 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,129 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Nhà Trắng dọa sẽ đáp trả quyết liệt vụ tập kích căn cứ ở '
+2024-01-30 09:52:24,129 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'Jordan khiến ba binh sĩ thiệt mạng, nhưng khẳng định không '
+2024-01-30 09:52:24,130 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'muốn chiến tranh với Iran.',
+2024-01-30 09:52:24,130 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,130 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': 'Mỹ dọa đáp trả quyết liệt vụ căn cứ ở Jordan bị tập kích'}
+2024-01-30 09:52:24,130 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,130 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Từ khi lên nắm quyền tháng 6/2022, Tổng thống Ferdinand '
+2024-01-30 09:52:24,130 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'Marcos Jr. đã thúc đẩy kế hoạch kinh tế - xã hội đầy tham '
+2024-01-30 09:52:24,131 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'vọng nhằm đổi mới toàn diện Philippines.',
+2024-01-30 09:52:24,131 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,131 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': "Tổng thống Marcos - người thúc đẩy tầm nhìn về 'Philippines Mới'"}
+2024-01-30 09:52:24,131 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,131 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Uyên Linh - gây chú ý ở show "Đạp gió" - nói đạt tự do tài '
+2024-01-30 09:52:24,131 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'chính, làm chủ thời gian nên cuộc sống không có gì để phàn '
+2024-01-30 09:52:24,132 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'nàn.',
+2024-01-30 09:52:24,132 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,132 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': "Uyên Linh: 'Tôi tự do tài chính, sống vui'"}
+2024-01-30 09:52:24,132 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,132 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Nga có thể thu được thông tin quân sự quan trọng sau khi một '
+2024-01-30 09:52:24,132 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'tên lửa Neptune (Thần biển) còn nguyên vẹn của Ukraine dạt '
+2024-01-30 09:52:24,133 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'vào bờ biển nước này.',
+2024-01-30 09:52:24,133 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,133 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': 'Tên lửa Thần biển Ukraine dạt vào bãi biển Nga'}
+2024-01-30 09:52:24,133 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,133 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Lionel Messi và Luis Suarez cùng ghi bàn đầu tiên trong năm '
+2024-01-30 09:52:24,133 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 '2024, khi Inter Miami thua Al Hilal 3-4 ở giải giao hữu '
+2024-01-30 09:52:24,134 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'Riyadh Cup.',
+2024-01-30 09:52:24,134 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,134 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': 'Messi, Suarez không cứu nổi Inter Miami'}
+2024-01-30 09:52:24,134 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,134 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Cục Dự trữ liên bang Mỹ (Fed) gần đây chỉnh sửa nhiều từ ngữ '
+2024-01-30 09:52:24,134 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'trong phát biểu và báo cáo, để thị trường không bất ngờ khi '
+2024-01-30 09:52:24,134 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'lãi suất giảm.',
+2024-01-30 09:52:24,135 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,135 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': 'Fed đã thay đổi những gì để chuẩn bị cho việc giảm lãi suất'}
+2024-01-30 09:52:24,135 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,135 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Theo HLV tuyển Bồ Đào Nha Roberto Martinez, ông và nhiều '
+2024-01-30 09:52:24,135 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'người khác mắc sai lầm khi bỏ phiếu bầu FIFA The Best 2023 - '
+2024-01-30 09:52:24,135 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'giải gây tranh cãi khi được trao cho Lionel Messi thay vì '
+2024-01-30 09:52:24,135 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'Erling Haaland.',
+2024-01-30 09:52:24,136 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,136 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': 'Nhầm lẫn về World Cup khi bầu FIFA The Best 2023'}
+2024-01-30 09:52:24,136 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,136 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Doanh số thị trường ôtô giảm mạnh so với 2022, trong khi '
+2024-01-30 09:52:24,136 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'lượng xe mới ra mắt và các vụ triệu hồi đều nhiều kỷ lục.',
+2024-01-30 09:52:24,136 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,136 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': 'Thị trường ôtô Việt 2023: doanh số giảm mạnh, triệu hồi kỷ lục'}
+2024-01-30 09:52:24,137 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,137 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Ông Bùi Văn Khắng, Phó chủ tịch tỉnh Quảng Ninh, 53 tuổi, '
+2024-01-30 09:52:24,137 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'được Thủ tướng bổ nhiệm làm Thứ trưởng Tài chính, ngày 29/1.',
+2024-01-30 09:52:24,137 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,137 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': 'Phó chủ tịch Quảng Ninh làm Thứ trưởng Tài chính'}
+2024-01-30 09:52:24,137 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,137 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Sợ vận xui, doanh nhân Lý Lĩnh Đào mời thầy phong thủy tư vấn '
+2024-01-30 09:52:24,138 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'giúp đổi vận và đấu trí về "hút tài lộc" với hàng xóm, dẫn '
+2024-01-30 09:52:24,138 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'đến thảm án sát hại 8 người.',
+2024-01-30 09:52:24,138 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,138 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': "Thảm án từ 'cuộc chiến phong thuỷ' với gia đình hàng xóm"}
+2024-01-30 09:52:24,139 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,139 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Tỷ phú Jeff Bezos sử dụng chiếc bàn làm bằng cánh cửa từ thời '
+2024-01-30 09:52:24,140 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'sáng lập Amazon, dù hiện là một trong những người giàu nhất '
+2024-01-30 09:52:24,140 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'thế giới.',
+2024-01-30 09:52:24,140 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,140 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': 'Ông chủ Amazon vẫn dùng bàn tự chế suốt 30 năm'}
+2024-01-30 09:52:24,140 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,141 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Quan chức Mỹ cho biết sự nhầm lẫn khi nhận dạng UAV khiến '
+2024-01-30 09:52:24,141 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'nước này không chặn được vụ tập kích căn cứ ở đông bắc '
+2024-01-30 09:52:24,141 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'Jordan.',
+2024-01-30 09:52:24,141 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,141 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': 'Lý do Mỹ không chặn được UAV tập kích căn cứ ở Jordan'}
+2024-01-30 09:52:24,141 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,141 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Ông Putin, 71 tuổi, chính thức được ghi tên vào danh sách ứng '
+2024-01-30 09:52:24,142 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'viên tham gia cuộc bầu cử tổng thống Nga diễn ra vào tháng 3.',
+2024-01-30 09:52:24,142 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,142 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': 'Ông Putin chính thức tranh cử tổng thống Nga'}
+2024-01-30 09:52:24,142 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,142 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Jordan ghi hai bàn trong hai phút bù hiệp hai, để thắng ngược '
+2024-01-30 09:52:24,142 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'Iraq 3-2 tại vòng 1/8 Asian Cup 2023.',
+2024-01-30 09:52:24,142 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,142 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': 'Jordan loại Iraq khỏi Asian Cup 2023'}
+2024-01-30 09:52:24,143 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,143 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Cục Đăng kiểm Việt Nam khuyến cáo chủ phương tiện tận dụng '
+2024-01-30 09:52:24,143 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'thời điểm tháng 2 và 3 đi đăng kiểm sớm trước thời hạn để '
+2024-01-30 09:52:24,143 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'tránh ùn tắc tại các thành phố lớn.',
+2024-01-30 09:52:24,143 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,143 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': 'Khuyến cáo chủ xe đăng kiểm trước hạn'}
+2024-01-30 09:52:24,143 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,144 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Dừa, bưởi được vẽ thư pháp, mai đào, trang trí rồng phượng, '
+2024-01-30 09:52:24,144 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'hoa lá, bán giá từ 300.000 đồng, trái đặc biệt giá 2,5 triệu '
+2024-01-30 09:52:24,144 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'đồng.',
+2024-01-30 09:52:24,144 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,145 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': 'Gần triệu đồng cặp dừa, bưởi vẽ thư pháp'}
+2024-01-30 09:52:24,145 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,145 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Xá lợi thiền sư Thích Nhất Hạnh được các tăng ni rước từ '
+2024-01-30 09:52:24,145 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'thiền đường Trăng Rằm sang thất Lắng Nghe trong khuôn viên '
+2024-01-30 09:52:24,145 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'chùa Từ Hiếu, sáng 29/1.',
+2024-01-30 09:52:24,146 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,146 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': 'Hàng nghìn phật tử rước xá lợi thiền sư Thích Nhất Hạnh'}
+2024-01-30 09:52:24,146 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,146 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Hình ảnh tiền đạo Neymar phát phì trong lần xuất hiện mới đây '
+2024-01-30 09:52:24,146 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'đang gây bão trên mạng xã hội.',
+2024-01-30 09:52:24,146 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,147 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': 'Neymar gây sốc với ngoại hình thừa cân'}
+2024-01-30 09:52:24,147 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,147 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Cựu chủ tịch Hiệp hội bóng đá Trung Quốc Trần Tuất Nguyên bị '
+2024-01-30 09:52:24,147 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'cáo buộc nhận hối lộ 11,4 triệu USD, cựu huấn luyện trưởng Lý '
+2024-01-30 09:52:24,148 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'Thiết khai chi 3 triệu nhân dân tệ để được dẫn dắt tuyển quốc '
+2024-01-30 09:52:24,148 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'gia.',
+2024-01-30 09:52:24,148 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,149 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': 'Đại án tham nhũng chấn động bóng đá Trung Quốc'}
+2024-01-30 09:52:24,149 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 09:52:24,149 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'description': 'Lực lượng Houthi tuyên bố phóng tên lửa nhằm vào USS Lewis B. '
+2024-01-30 09:52:24,149 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'Puller, chiến hạm đóng vai trò căn cứ viễn chinh di động của '
+2024-01-30 09:52:24,149 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                 'hải quân Mỹ.',
+2024-01-30 09:52:24,150 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'sdt': None,
+2024-01-30 09:52:24,150 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'title': 'Houthi tuyên bố tập kích căn cứ viễn chinh di động của Mỹ'}
+2024-01-30 09:52:24,150 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.engine] INFO: Closing spider (finished)
+2024-01-30 09:52:24,150 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.extensions.feedexport] INFO: Stored json feed (21 items) in: output.json
+2024-01-30 09:52:24,150 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+2024-01-30 09:52:24,150 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] {'downloader/request_bytes': 229,
+2024-01-30 09:52:24,150 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'downloader/request_count': 1,
+2024-01-30 09:52:24,151 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'downloader/request_method_count/GET': 1,
+2024-01-30 09:52:24,151 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'downloader/response_bytes': 47591,
+2024-01-30 09:52:24,151 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'downloader/response_count': 1,
+2024-01-30 09:52:24,151 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'downloader/response_status_count/200': 1,
+2024-01-30 09:52:24,151 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'elapsed_time_seconds': 0.343934,
+2024-01-30 09:52:24,151 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'feedexport/success_count/FileFeedStorage': 1,
+2024-01-30 09:52:24,151 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'finish_reason': 'finished',
+2024-01-30 09:52:24,151 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'finish_time': datetime.datetime(2024, 1, 30, 2, 52, 23, 993196, tzinfo=datetime.timezone.utc),
+2024-01-30 09:52:24,151 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'httpcompression/response_bytes': 225973,
+2024-01-30 09:52:24,151 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'httpcompression/response_count': 1,
+2024-01-30 09:52:24,151 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'item_scraped_count': 21,
+2024-01-30 09:52:24,151 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'log_count/DEBUG': 23,
+2024-01-30 09:52:24,152 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'log_count/INFO': 11,
+2024-01-30 09:52:24,152 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'log_count/WARNING': 2,
+2024-01-30 09:52:24,152 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'memusage/max': 57319424,
+2024-01-30 09:52:24,152 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'memusage/startup': 57319424,
+2024-01-30 09:52:24,152 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'response_received_count': 1,
+2024-01-30 09:52:24,152 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scheduler/dequeued': 1,
+2024-01-30 09:52:24,152 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scheduler/dequeued/memory': 1,
+2024-01-30 09:52:24,152 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scheduler/enqueued': 1,
+2024-01-30 09:52:24,152 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'scheduler/enqueued/memory': 1,
+2024-01-30 09:52:24,152 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]  'start_time': datetime.datetime(2024, 1, 30, 2, 52, 23, 649262, tzinfo=datetime.timezone.utc)}
+2024-01-30 09:52:24,152 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 2024-01-30 09:52:23 [scrapy.core.engine] INFO: Spider closed (finished)
+2024-01-30 09:52:24,153 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] Hello
+2024-01-30 09:53:48,029 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-5] Run python script exit code : 1
+2024-01-30 09:53:48,029 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-5] Hello
+2024-01-30 09:53:48,029 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-5] Traceback (most recent call last):
+2024-01-30 09:53:48,030 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-5]   File "/home/dev/Downloads/crawler/crawler/spiders/runMethod.py", line 35, in <module>
+2024-01-30 09:53:48,030 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-5]     result = subprocess.run(['python3', path_to_script, json_file_path])
+2024-01-30 09:53:48,030 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-5] AttributeError: 'module' object has no attribute 'run'
+2024-01-30 09:53:48,031 ERROR com.example.newapp.controll.WebsiteController [http-nio-8888-exec-5] Run python script code in cmd Fail : 
+2024-01-30 09:58:16,531 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] Run python script exit code : 1
+2024-01-30 09:58:16,532 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] Hello
+2024-01-30 09:58:16,532 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] Traceback (most recent call last):
+2024-01-30 09:58:16,532 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]   File "/home/dev/Downloads/crawler/crawler/spiders/runMethod.py", line 35, in <module>
+2024-01-30 09:58:16,532 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]     result = subprocess.run(['/usr/bin/python3', path_to_script, json_file_path])
+2024-01-30 09:58:16,532 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] AttributeError: 'module' object has no attribute 'run'
+2024-01-30 09:58:16,533 ERROR com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] Run python script code in cmd Fail : 
+2024-01-30 10:05:53,583 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-30 10:05:53,585 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-01-30 10:05:53,597 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-01-30 10:05:58,890 INFO org.springframework.boot.StartupInfoLogger [main] Starting NewAppApplication using Java 17.0.10 on dev-HP-Laptop-14-bs1xx with PID 7210 (/home/dev/Java_Python/Crawler_Java/target/classes started by dev in /home/dev/Java_Python/Crawler_Java)
+2024-01-30 10:05:58,894 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-30 10:05:59,477 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-30 10:05:59,538 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interfaces.
+2024-01-30 10:06:00,096 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8888 (http)
+2024-01-30 10:06:00,106 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8888"]
+2024-01-30 10:06:00,107 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2024-01-30 10:06:00,108 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.76]
+2024-01-30 10:06:00,190 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-01-30 10:06:00,191 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1229 ms
+2024-01-30 10:06:00,359 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-30 10:06:00,394 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-01-30 10:06:00,508 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-30 10:06:00,581 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-01-30 10:06:00,714 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-01-30 10:06:00,726 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2024-01-30 10:06:01,146 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-30 10:06:01,153 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-30 10:06:01,443 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-30 10:06:01,699 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8888"]
+2024-01-30 10:06:01,710 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8888 (http) with context path ''
+2024-01-30 10:06:01,724 INFO org.springframework.boot.StartupInfoLogger [main] Started NewAppApplication in 3.33 seconds (JVM running for 4.01)
+2024-01-30 10:06:06,660 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-30 10:06:06,661 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8888-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-01-30 10:06:06,662 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8888-exec-1] Completed initialization in 1 ms
+2024-01-30 10:06:07,756 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 0
+2024-01-30 10:06:16,560 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-3] 0
+2024-01-30 10:30:10,133 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-30 10:30:10,135 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-01-30 10:30:10,148 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-01-30 10:30:14,431 INFO org.springframework.boot.StartupInfoLogger [main] Starting NewAppApplication using Java 17.0.10 on dev-HP-Laptop-14-bs1xx with PID 8125 (/home/dev/Java_Python/Crawler_Java/target/classes started by dev in /home/dev/Java_Python/Crawler_Java)
+2024-01-30 10:30:14,434 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-30 10:30:14,987 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-30 10:30:15,024 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interfaces.
+2024-01-30 10:30:15,420 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8888 (http)
+2024-01-30 10:30:15,427 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8888"]
+2024-01-30 10:30:15,429 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2024-01-30 10:30:15,429 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.76]
+2024-01-30 10:30:15,510 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-01-30 10:30:15,510 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1021 ms
+2024-01-30 10:30:15,659 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-30 10:30:15,696 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-01-30 10:30:15,809 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-30 10:30:15,878 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-01-30 10:30:16,011 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-01-30 10:30:16,022 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2024-01-30 10:30:16,408 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-30 10:30:16,415 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-30 10:30:16,688 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-30 10:30:16,934 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8888"]
+2024-01-30 10:30:16,944 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8888 (http) with context path ''
+2024-01-30 10:30:16,954 INFO org.springframework.boot.StartupInfoLogger [main] Started NewAppApplication in 2.943 seconds (JVM running for 3.501)
+2024-01-30 10:30:26,576 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-30 10:30:26,576 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8888-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-01-30 10:30:26,577 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8888-exec-1] Completed initialization in 1 ms
+2024-01-30 10:30:26,748 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 1
+2024-01-30 10:30:26,754 ERROR com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] Run python script code in cmd Fail : 
+2024-01-30 10:35:50,104 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-4] 1
+2024-01-30 10:35:57,986 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-5] 1
+2024-01-30 10:35:57,987 ERROR com.example.newapp.controll.WebsiteController [http-nio-8888-exec-5] Run python script code in cmd Fail : 
+2024-01-30 10:36:11,184 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-30 10:36:11,194 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-01-30 10:36:11,203 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-01-30 10:36:15,074 INFO org.springframework.boot.StartupInfoLogger [main] Starting NewAppApplication using Java 17.0.10 on dev-HP-Laptop-14-bs1xx with PID 8448 (/home/dev/Java_Python/Crawler_Java/target/classes started by dev in /home/dev/Java_Python/Crawler_Java)
+2024-01-30 10:36:15,076 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-01-30 10:36:15,597 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-30 10:36:15,633 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interfaces.
+2024-01-30 10:36:16,014 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8888 (http)
+2024-01-30 10:36:16,020 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8888"]
+2024-01-30 10:36:16,021 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2024-01-30 10:36:16,021 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.76]
+2024-01-30 10:36:16,099 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2024-01-30 10:36:16,100 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 980 ms
+2024-01-30 10:36:16,250 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-30 10:36:16,286 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2024-01-30 10:36:16,398 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-30 10:36:16,472 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-01-30 10:36:16,613 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-01-30 10:36:16,625 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2024-01-30 10:36:17,029 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-30 10:36:17,036 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-30 10:36:17,312 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-30 10:36:17,564 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8888"]
+2024-01-30 10:36:17,575 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8888 (http) with context path ''
+2024-01-30 10:36:17,585 INFO org.springframework.boot.StartupInfoLogger [main] Started NewAppApplication in 2.923 seconds (JVM running for 3.443)
+2024-01-30 10:36:33,875 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8888-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-30 10:36:33,876 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8888-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-01-30 10:36:33,877 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8888-exec-1] Completed initialization in 1 ms
+2024-01-30 10:36:34,009 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]   File "/home/dev/Downloads/crawler/crawler/spiders/runMethod.py", line 9
+2024-01-30 10:36:34,009 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]     activate_cmd = f"source {activate_path}"
+2024-01-30 10:36:34,010 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1]                                            ^
+2024-01-30 10:36:34,010 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] SyntaxError: invalid syntax
+2024-01-30 10:36:34,011 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] 1
+2024-01-30 10:36:34,017 ERROR com.example.newapp.controll.WebsiteController [http-nio-8888-exec-1] Run python script code in cmd Fail : 
+2024-01-30 10:38:17,756 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-4]   File "/home/dev/Downloads/crawler/crawler/spiders/runMethod.py", line 12
+2024-01-30 10:38:17,757 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-4]     activate_cmd = f"source {activate_path} && python /home/dev/Downloads/crawler/crawler/spiders/run_scrawler.py {json_file_path}"
+2024-01-30 10:38:17,757 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-4]                                                                                                                                   ^
+2024-01-30 10:38:17,757 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-4] SyntaxError: invalid syntax
+2024-01-30 10:38:17,758 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-4] 1
+2024-01-30 10:38:17,761 ERROR com.example.newapp.controll.WebsiteController [http-nio-8888-exec-4] Run python script code in cmd Fail : 
+2024-01-30 10:43:05,595 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-6]   File "/home/dev/Downloads/crawler/crawler/spiders/runMethod.py", line 10
+2024-01-30 10:43:05,595 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-6]     activate_cmd = f"source {activate_path} && python /home/dev/Downloads/crawler/crawler/spiders/run_scrawler.py {json_file_path}"
+2024-01-30 10:43:05,595 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-6]                                                                                                                                   ^
+2024-01-30 10:43:05,595 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-6] SyntaxError: invalid syntax
+2024-01-30 10:43:05,596 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-6] 1
+2024-01-30 10:43:05,598 ERROR com.example.newapp.controll.WebsiteController [http-nio-8888-exec-6] Run python script code in cmd Fail : 
+2024-01-30 10:43:33,748 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:33 [scrapy.utils.log] INFO: Scrapy 2.11.0 started (bot: scrapybot)
+2024-01-30 10:43:33,759 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:33 [scrapy.utils.log] INFO: Versions: lxml 5.1.0.0, libxml2 2.12.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.8.0 (default, Dec  9 2021, 17:53:27) - [GCC 8.4.0], pyOpenSSL 24.0.0 (OpenSSL 3.2.0 23 Nov 2023), cryptography 42.0.1, Platform Linux-5.4.0-150-generic-x86_64-with-glibc2.27
+2024-01-30 10:43:33,762 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:33 [scrapy.addons] INFO: Enabled addons:
+2024-01-30 10:43:33,762 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] []
+2024-01-30 10:43:33,762 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:33 [py.warnings] WARNING: /home/dev/Downloads/crawler/venv/lib/python3.8/site-packages/scrapy/utils/request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+2024-01-30 10:43:33,762 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 
+2024-01-30 10:43:33,762 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+2024-01-30 10:43:33,762 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 
+2024-01-30 10:43:33,762 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+2024-01-30 10:43:33,762 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]   return cls(crawler)
+2024-01-30 10:43:33,763 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 
+2024-01-30 10:43:33,763 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:33 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2024-01-30 10:43:33,773 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:33 [scrapy.extensions.telnet] INFO: Telnet Password: 3bd66546a0861431
+2024-01-30 10:43:33,807 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:33 [py.warnings] WARNING: /home/dev/Downloads/crawler/venv/lib/python3.8/site-packages/scrapy/extensions/feedexport.py:406: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+2024-01-30 10:43:33,807 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]   exporter = cls(crawler)
+2024-01-30 10:43:33,807 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 
+2024-01-30 10:43:33,810 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:33 [scrapy.middleware] INFO: Enabled extensions:
+2024-01-30 10:43:33,810 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] ['scrapy.extensions.corestats.CoreStats',
+2024-01-30 10:43:33,811 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scrapy.extensions.telnet.TelnetConsole',
+2024-01-30 10:43:33,811 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scrapy.extensions.memusage.MemoryUsage',
+2024-01-30 10:43:33,811 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scrapy.extensions.feedexport.FeedExporter',
+2024-01-30 10:43:33,811 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scrapy.extensions.logstats.LogStats']
+2024-01-30 10:43:33,811 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:33 [scrapy.crawler] INFO: Overridden settings:
+2024-01-30 10:43:33,811 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'USER_AGENT': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)'}
+2024-01-30 10:43:33,883 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:33 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2024-01-30 10:43:33,883 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] ['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+2024-01-30 10:43:33,883 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+2024-01-30 10:43:33,883 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+2024-01-30 10:43:33,883 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+2024-01-30 10:43:33,883 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+2024-01-30 10:43:33,884 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+2024-01-30 10:43:33,884 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+2024-01-30 10:43:33,884 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+2024-01-30 10:43:33,884 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+2024-01-30 10:43:33,884 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+2024-01-30 10:43:33,884 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2024-01-30 10:43:33,886 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:33 [scrapy.middleware] INFO: Enabled spider middlewares:
+2024-01-30 10:43:33,886 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+2024-01-30 10:43:33,887 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+2024-01-30 10:43:33,887 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scrapy.spidermiddlewares.referer.RefererMiddleware',
+2024-01-30 10:43:33,887 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+2024-01-30 10:43:33,887 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2024-01-30 10:43:33,887 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:33 [scrapy.middleware] INFO: Enabled item pipelines:
+2024-01-30 10:43:33,887 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] []
+2024-01-30 10:43:33,887 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:33 [scrapy.core.engine] INFO: Spider opened
+2024-01-30 10:43:33,892 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:33 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2024-01-30 10:43:33,893 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:33 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2024-01-30 10:43:34,109 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://vnexpress.net/> (referer: None)
+2024-01-30 10:43:34,236 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,238 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Ngày càng nhiều cử tri da màu Mỹ, nhóm ủng hộ cốt lõi từng '
+2024-01-30 10:43:34,239 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'giúp ông Biden đánh bại Trump, bày tỏ thất vọng với những cam '
+2024-01-30 10:43:34,240 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'kết của Tổng thống đương nhiệm.',
+2024-01-30 10:43:34,240 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,241 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': 'Ông Biden mất lòng cử tri da màu'}
+2024-01-30 10:43:34,241 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,242 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Trừ "Ngọc Hoàng" Quốc Khánh, êkíp "Táo quân" 2024 thay hết '
+2024-01-30 10:43:34,242 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'diễn viên cũ, nhằm tạo nét tươi mới.',
+2024-01-30 10:43:34,243 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,243 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': "'Táo quân' 2024 thay gần toàn bộ diễn viên"}
+2024-01-30 10:43:34,244 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,244 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Từ khi lên nắm quyền tháng 6/2022, Tổng thống Ferdinand '
+2024-01-30 10:43:34,245 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'Marcos Jr. đã thúc đẩy kế hoạch kinh tế - xã hội đầy tham '
+2024-01-30 10:43:34,245 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'vọng nhằm đổi mới toàn diện Philippines.',
+2024-01-30 10:43:34,246 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,246 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': "Tổng thống Marcos - người thúc đẩy tầm nhìn về 'Philippines Mới'"}
+2024-01-30 10:43:34,246 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,247 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Uyên Linh - gây chú ý ở show "Đạp gió" - nói đạt tự do tài '
+2024-01-30 10:43:34,247 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'chính, làm chủ thời gian nên cuộc sống không có gì để phàn '
+2024-01-30 10:43:34,247 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'nàn.',
+2024-01-30 10:43:34,247 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,248 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': "Uyên Linh: 'Tôi tự do tài chính, sống vui'"}
+2024-01-30 10:43:34,248 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,248 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Nga có thể thu được thông tin quân sự quan trọng sau khi một '
+2024-01-30 10:43:34,249 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'tên lửa Neptune (Thần biển) còn nguyên vẹn của Ukraine dạt '
+2024-01-30 10:43:34,250 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'vào bờ biển nước này.',
+2024-01-30 10:43:34,250 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,251 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': 'Tên lửa Thần biển Ukraine dạt vào bãi biển Nga'}
+2024-01-30 10:43:34,252 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,252 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Lionel Messi và Luis Suarez cùng ghi bàn đầu tiên trong năm '
+2024-01-30 10:43:34,252 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 '2024, khi Inter Miami thua Al Hilal 3-4 ở giải giao hữu '
+2024-01-30 10:43:34,253 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'Riyadh Cup.',
+2024-01-30 10:43:34,253 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,253 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': 'Messi, Suarez không cứu nổi Inter Miami'}
+2024-01-30 10:43:34,253 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,253 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Cục Dự trữ liên bang Mỹ (Fed) gần đây chỉnh sửa nhiều từ ngữ '
+2024-01-30 10:43:34,253 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'trong phát biểu và báo cáo, để thị trường không bất ngờ khi '
+2024-01-30 10:43:34,254 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'lãi suất giảm.',
+2024-01-30 10:43:34,254 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,254 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': 'Fed đã thay đổi những gì để chuẩn bị cho việc giảm lãi suất'}
+2024-01-30 10:43:34,254 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,254 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Theo HLV tuyển Bồ Đào Nha Roberto Martinez, ông và nhiều '
+2024-01-30 10:43:34,255 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'người khác mắc sai lầm khi bỏ phiếu bầu FIFA The Best 2023 - '
+2024-01-30 10:43:34,255 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'giải gây tranh cãi khi được trao cho Lionel Messi thay vì '
+2024-01-30 10:43:34,255 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'Erling Haaland.',
+2024-01-30 10:43:34,255 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,255 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': 'Nhầm lẫn về World Cup khi bầu FIFA The Best 2023'}
+2024-01-30 10:43:34,255 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,256 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Doanh số thị trường ôtô giảm mạnh so với 2022, trong khi '
+2024-01-30 10:43:34,256 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'lượng xe mới ra mắt và các vụ triệu hồi đều nhiều kỷ lục.',
+2024-01-30 10:43:34,256 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,256 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': 'Thị trường ôtô Việt 2023: doanh số giảm mạnh, triệu hồi kỷ lục'}
+2024-01-30 10:43:34,256 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,256 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Sợ vận xui, doanh nhân Lý Lĩnh Đào mời thầy phong thủy tư vấn '
+2024-01-30 10:43:34,257 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'giúp đổi vận và đấu trí về "hút tài lộc" với hàng xóm, dẫn '
+2024-01-30 10:43:34,257 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'đến thảm án sát hại 8 người.',
+2024-01-30 10:43:34,257 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,257 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': "Thảm án từ 'cuộc chiến phong thuỷ' với gia đình hàng xóm"}
+2024-01-30 10:43:34,257 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,257 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Nhà Trắng dọa sẽ đáp trả quyết liệt vụ tập kích căn cứ ở '
+2024-01-30 10:43:34,257 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'Jordan khiến ba binh sĩ thiệt mạng, nhưng khẳng định không '
+2024-01-30 10:43:34,258 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'muốn chiến tranh với Iran.',
+2024-01-30 10:43:34,258 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,258 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': 'Mỹ dọa đáp trả quyết liệt vụ căn cứ ở Jordan bị tập kích'}
+2024-01-30 10:43:34,258 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,258 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Tỷ phú Jeff Bezos sử dụng chiếc bàn làm bằng cánh cửa từ thời '
+2024-01-30 10:43:34,258 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'sáng lập Amazon, dù hiện là một trong những người giàu nhất '
+2024-01-30 10:43:34,259 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'thế giới.',
+2024-01-30 10:43:34,259 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,259 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': 'Ông chủ Amazon vẫn dùng bàn tự chế suốt 30 năm'}
+2024-01-30 10:43:34,259 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,259 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'TS Trần Hữu Minh, Chánh văn phòng Ủy ban An toàn giao thông '
+2024-01-30 10:43:34,259 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'quốc gia, cho rằng cần xử lý hình sự tài xế vi phạm nồng độ '
+2024-01-30 10:43:34,259 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'cồn vượt mức 3 dù chưa gây hậu quả.',
+2024-01-30 10:43:34,260 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,260 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': 'Đề xuất xử lý hình sự tài xế có nồng độ cồn mức cao'}
+2024-01-30 10:43:34,260 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,260 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Quan chức Mỹ cho biết sự nhầm lẫn khi nhận dạng UAV khiến '
+2024-01-30 10:43:34,260 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'nước này không chặn được vụ tập kích căn cứ ở đông bắc '
+2024-01-30 10:43:34,260 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'Jordan.',
+2024-01-30 10:43:34,260 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,260 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': 'Lý do Mỹ không chặn được UAV tập kích căn cứ ở Jordan'}
+2024-01-30 10:43:34,261 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,261 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Jordan ghi hai bàn trong hai phút bù hiệp hai, để thắng ngược '
+2024-01-30 10:43:34,261 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'Iraq 3-2 tại vòng 1/8 Asian Cup 2023.',
+2024-01-30 10:43:34,262 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,262 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': 'Jordan loại Iraq khỏi Asian Cup 2023'}
+2024-01-30 10:43:34,262 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,262 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Ông Putin, 71 tuổi, chính thức được ghi tên vào danh sách ứng '
+2024-01-30 10:43:34,262 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'viên tham gia cuộc bầu cử tổng thống Nga diễn ra vào tháng 3.',
+2024-01-30 10:43:34,262 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,263 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': 'Ông Putin chính thức tranh cử tổng thống Nga'}
+2024-01-30 10:43:34,263 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,263 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Ông Bùi Văn Khắng, Phó chủ tịch tỉnh Quảng Ninh, 53 tuổi, '
+2024-01-30 10:43:34,263 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'được Thủ tướng bổ nhiệm làm Thứ trưởng Tài chính, ngày 29/1.',
+2024-01-30 10:43:34,263 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,264 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': 'Phó chủ tịch Quảng Ninh làm Thứ trưởng Tài chính'}
+2024-01-30 10:43:34,264 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,264 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Cục Đăng kiểm Việt Nam khuyến cáo chủ phương tiện tận dụng '
+2024-01-30 10:43:34,264 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'thời điểm tháng 2 và 3 đi đăng kiểm sớm trước thời hạn để '
+2024-01-30 10:43:34,265 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'tránh ùn tắc tại các thành phố lớn.',
+2024-01-30 10:43:34,265 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,265 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': 'Khuyến cáo chủ xe đăng kiểm trước hạn'}
+2024-01-30 10:43:34,265 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,265 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Dừa, bưởi được vẽ thư pháp, mai đào, trang trí rồng phượng, '
+2024-01-30 10:43:34,266 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'hoa lá, bán giá từ 300.000 đồng, trái đặc biệt giá 2,5 triệu '
+2024-01-30 10:43:34,266 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'đồng.',
+2024-01-30 10:43:34,266 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,266 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': 'Gần triệu đồng cặp dừa, bưởi vẽ thư pháp'}
+2024-01-30 10:43:34,266 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,267 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Xá lợi thiền sư Thích Nhất Hạnh được các tăng ni rước từ '
+2024-01-30 10:43:34,267 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'thiền đường Trăng Rằm sang thất Lắng Nghe trong khuôn viên '
+2024-01-30 10:43:34,267 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'chùa Từ Hiếu, sáng 29/1.',
+2024-01-30 10:43:34,267 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,268 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': 'Hàng nghìn phật tử rước xá lợi thiền sư Thích Nhất Hạnh'}
+2024-01-30 10:43:34,268 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://vnexpress.net/>
+2024-01-30 10:43:34,268 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'description': 'Hình ảnh tiền đạo Neymar phát phì trong lần xuất hiện mới đây '
+2024-01-30 10:43:34,268 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]                 'đang gây bão trên mạng xã hội.',
+2024-01-30 10:43:34,268 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'sdt': None,
+2024-01-30 10:43:34,269 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'title': 'Neymar gây sốc với ngoại hình thừa cân'}
+2024-01-30 10:43:34,272 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.engine] INFO: Closing spider (finished)
+2024-01-30 10:43:34,273 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.extensions.feedexport] INFO: Stored json feed (21 items) in: output.json
+2024-01-30 10:43:34,274 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+2024-01-30 10:43:34,274 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] {'downloader/request_bytes': 229,
+2024-01-30 10:43:34,274 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'downloader/request_count': 1,
+2024-01-30 10:43:34,274 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'downloader/request_method_count/GET': 1,
+2024-01-30 10:43:34,274 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'downloader/response_bytes': 47029,
+2024-01-30 10:43:34,274 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'downloader/response_count': 1,
+2024-01-30 10:43:34,274 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'downloader/response_status_count/200': 1,
+2024-01-30 10:43:34,275 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'elapsed_time_seconds': 0.3813,
+2024-01-30 10:43:34,275 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'feedexport/success_count/FileFeedStorage': 1,
+2024-01-30 10:43:34,275 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'finish_reason': 'finished',
+2024-01-30 10:43:34,275 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'finish_time': datetime.datetime(2024, 1, 30, 3, 43, 34, 272706, tzinfo=datetime.timezone.utc),
+2024-01-30 10:43:34,275 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'httpcompression/response_bytes': 223927,
+2024-01-30 10:43:34,275 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'httpcompression/response_count': 1,
+2024-01-30 10:43:34,275 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'item_scraped_count': 21,
+2024-01-30 10:43:34,276 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'log_count/DEBUG': 23,
+2024-01-30 10:43:34,276 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'log_count/INFO': 11,
+2024-01-30 10:43:34,276 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'log_count/WARNING': 2,
+2024-01-30 10:43:34,276 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'memusage/max': 57597952,
+2024-01-30 10:43:34,276 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'memusage/startup': 57597952,
+2024-01-30 10:43:34,276 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'response_received_count': 1,
+2024-01-30 10:43:34,276 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scheduler/dequeued': 1,
+2024-01-30 10:43:34,276 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scheduler/dequeued/memory': 1,
+2024-01-30 10:43:34,277 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scheduler/enqueued': 1,
+2024-01-30 10:43:34,277 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'scheduler/enqueued/memory': 1,
+2024-01-30 10:43:34,277 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8]  'start_time': datetime.datetime(2024, 1, 30, 3, 43, 33, 891406, tzinfo=datetime.timezone.utc)}
+2024-01-30 10:43:34,277 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 2024-01-30 10:43:34 [scrapy.core.engine] INFO: Spider closed (finished)
+2024-01-30 10:43:34,409 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] Hello
+2024-01-30 10:43:34,410 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-8] 0
+2024-01-30 10:43:41,024 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:41 [scrapy.utils.log] INFO: Scrapy 2.11.0 started (bot: scrapybot)
+2024-01-30 10:43:41,035 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:41 [scrapy.utils.log] INFO: Versions: lxml 5.1.0.0, libxml2 2.12.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.8.0 (default, Dec  9 2021, 17:53:27) - [GCC 8.4.0], pyOpenSSL 24.0.0 (OpenSSL 3.2.0 23 Nov 2023), cryptography 42.0.1, Platform Linux-5.4.0-150-generic-x86_64-with-glibc2.27
+2024-01-30 10:43:41,037 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:41 [scrapy.addons] INFO: Enabled addons:
+2024-01-30 10:43:41,037 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] []
+2024-01-30 10:43:41,037 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:41 [py.warnings] WARNING: /home/dev/Downloads/crawler/venv/lib/python3.8/site-packages/scrapy/utils/request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+2024-01-30 10:43:41,038 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 
+2024-01-30 10:43:41,038 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+2024-01-30 10:43:41,038 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 
+2024-01-30 10:43:41,038 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+2024-01-30 10:43:41,038 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]   return cls(crawler)
+2024-01-30 10:43:41,038 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 
+2024-01-30 10:43:41,039 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:41 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2024-01-30 10:43:41,049 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:41 [scrapy.extensions.telnet] INFO: Telnet Password: d7bb948af23b4930
+2024-01-30 10:43:41,081 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:41 [py.warnings] WARNING: /home/dev/Downloads/crawler/venv/lib/python3.8/site-packages/scrapy/extensions/feedexport.py:406: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+2024-01-30 10:43:41,081 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]   exporter = cls(crawler)
+2024-01-30 10:43:41,081 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 
+2024-01-30 10:43:41,085 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:41 [scrapy.middleware] INFO: Enabled extensions:
+2024-01-30 10:43:41,085 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] ['scrapy.extensions.corestats.CoreStats',
+2024-01-30 10:43:41,085 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scrapy.extensions.telnet.TelnetConsole',
+2024-01-30 10:43:41,085 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scrapy.extensions.memusage.MemoryUsage',
+2024-01-30 10:43:41,086 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scrapy.extensions.feedexport.FeedExporter',
+2024-01-30 10:43:41,086 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scrapy.extensions.logstats.LogStats']
+2024-01-30 10:43:41,086 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:41 [scrapy.crawler] INFO: Overridden settings:
+2024-01-30 10:43:41,086 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'USER_AGENT': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)'}
+2024-01-30 10:43:41,156 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:41 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2024-01-30 10:43:41,156 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] ['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+2024-01-30 10:43:41,156 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+2024-01-30 10:43:41,157 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+2024-01-30 10:43:41,157 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+2024-01-30 10:43:41,157 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+2024-01-30 10:43:41,157 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+2024-01-30 10:43:41,157 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+2024-01-30 10:43:41,157 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+2024-01-30 10:43:41,157 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+2024-01-30 10:43:41,157 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+2024-01-30 10:43:41,157 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2024-01-30 10:43:41,158 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:41 [scrapy.middleware] INFO: Enabled spider middlewares:
+2024-01-30 10:43:41,158 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+2024-01-30 10:43:41,158 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+2024-01-30 10:43:41,159 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scrapy.spidermiddlewares.referer.RefererMiddleware',
+2024-01-30 10:43:41,159 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+2024-01-30 10:43:41,159 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2024-01-30 10:43:41,159 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:41 [scrapy.middleware] INFO: Enabled item pipelines:
+2024-01-30 10:43:41,159 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] []
+2024-01-30 10:43:41,159 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:41 [scrapy.core.engine] INFO: Spider opened
+2024-01-30 10:43:41,163 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:41 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2024-01-30 10:43:41,164 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:41 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2024-01-30 10:43:42,732 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html> (referer: None)
+2024-01-30 10:43:42,861 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,862 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': '💥💥💥 PHÂN LÔ BỘ CÔNG AN - Ô TÔ TRÁNH, DỪNG ĐỖ - 7 CHỖ CẤT '
+2024-01-30 10:43:42,863 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'TRONG NHÀ - NGÕ THÔNG TỨ TUNG - 4 TẦNG Ở NGAY - CHỦ CẦN BÁN '
+2024-01-30 10:43:42,863 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'GẤP 💥💥💥\r\n'
+2024-01-30 10:43:42,863 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'CHỦ CẦN BÁN GẤP TRƯỚC TẾT, GIÁ CHỐT ĐẦU 8.\r\n'
+2024-01-30 10:43:42,864 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '+ Nhà thuộc khu phân lô Bộ Công an, Vip và đ... ',
+2024-01-30 10:43:42,864 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,864 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'NHỈNH 8 TỶ MUỐN NHÀ Ô TÔ TRÁNH 50M2  4 TẦNG Q.THANH XUÂN.  BÁN GẤP '
+2024-01-30 10:43:42,865 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]           'TRƯỚC TẾT.'}
+2024-01-30 10:43:42,865 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,865 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': 'BÁN TÒA NHÀ 5 TẦNG, THANG MÁY ĐƯỜNG GIÁP BÁT, HOÀNG MAI CHỈ '
+2024-01-30 10:43:42,866 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '5,6 TỶ \r\n'
+2024-01-30 10:43:42,866 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 ' CẢ HÀ NỘI KHÔNG CÓ CĂN THỨ 2 VÌ CHẤP NHẬN BÁN LỖ THU HỒI '
+2024-01-30 10:43:42,866 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'VỐN\r\n'
+2024-01-30 10:43:42,867 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '\r\n'
+2024-01-30 10:43:42,867 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '\tMô tả: Hướng Tây Bắc.\r\n'
+2024-01-30 10:43:42,867 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '\tTòa nhà 5 tầng mới xây có thang máy, lô góc, hai mặt thoáng '
+2024-01-30 10:43:42,868 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'v... ',
+2024-01-30 10:43:42,868 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,868 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'CHỦ CẦN BÁN TÒA NHÀ 5 TẦNG THANG MÁY ĐƯỜNG GIÁP BÁT, CHỈ 5.6 TỶ'}
+2024-01-30 10:43:42,868 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,869 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': 'Giảm 4 tỷ bán nhà 8 tầng, Căn Góc, Mặt phố Khuất Duy Tiến '
+2024-01-30 10:43:42,869 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'Thanh Xuân \r\n'
+2024-01-30 10:43:42,869 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '+ Nhà mặt phố Khuất Duy Tiến, Nhân chính, Thanh Xuân tuyến '
+2024-01-30 10:43:42,869 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'đường trọng yếu các tỉnh.\r\n'
+2024-01-30 10:43:42,870 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '+ Nhà Căn Góc, 8 tầng, thang máy xịn, ngõ bên cạnh nhà 8m ô '
+2024-01-30 10:43:42,870 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'tô ... ',
+2024-01-30 10:43:42,870 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,870 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'Giảm 4 tỷ bán nhà 8 tầng, Căn Góc, Mặt phố Khuất Duy Tiến Thanh '
+2024-01-30 10:43:42,871 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]           'Xuân'}
+2024-01-30 10:43:42,871 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,871 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': '- Vị trí tòa nhà cách AEON Long Biên 1km di chuyển thuận tiện '
+2024-01-30 10:43:42,871 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'đi vào phố cũng như đi công tác các tỉnh thành như Sân Bay, '
+2024-01-30 10:43:42,871 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'Hải Phòng, Hải Dương, Hưng Yên... \r\n'
+2024-01-30 10:43:42,872 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '- Căn hộ tầng cao view đẹp thiết kế 2pn, 2vs phòng khach, bếp '
+2024-01-30 10:43:42,872 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '... ',
+2024-01-30 10:43:42,872 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,872 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'Bán gấp cc KĐT Sài Đồng - Cách cầu Vĩnh Tuy 1km - diện tích 83m2 '
+2024-01-30 10:43:42,872 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]           'giá 3.3 Tỷ.'}
+2024-01-30 10:43:42,873 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,873 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': 'MẶT PHỐ NGAY CẠNH CỔNG TRƯỜNG ĐẠI HỌC TÀI NGUYÊN VÀ MÔI '
+2024-01-30 10:43:42,873 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'TRƯỜNG - 6 TẦNG ĐẸP - MÓNG 9 TẦNG - KINH DOANH ĐỈNH - VỈA HÈ '
+2024-01-30 10:43:42,873 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'ĐÁ BÓNG - ĐƯỜNG RỘNG THÊNH THANG - KHU VỰC TIỀM NĂNG LỚN - '
+2024-01-30 10:43:42,873 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'CHO THUÊ 50TR/TH\r\n'
+2024-01-30 10:43:42,874 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'Mô tả: + Căn nhà mặt phố s... ',
+2024-01-30 10:43:42,874 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,874 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'BÁN TOÀ NHÀ 6 TẦNG MẶT PHỐ DT70M2, MT 5,6M VỈA HÈ 5M KD TẤP NẬP. '
+2024-01-30 10:43:42,874 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]           'CHỈ 18 TỶ'}
+2024-01-30 10:43:42,874 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,875 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': '+ CHỦ QUYẾT GIẢM 2 TỶ ĐỂ BÁN NHANH TRƯỚC TẾT CHIA TÀI SẢN CHO '
+2024-01-30 10:43:42,875 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'CÁC CON ĂN TẾT VUI VẺ.\r\n'
+2024-01-30 10:43:42,875 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '+ CHỈ 17,9 TỶ.\r\n'
+2024-01-30 10:43:42,875 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '+ MẶT PHỐ - MẶT PHỐ ĐƯỜNG PHÚ DIỄN - NGAY SÁT CẠNH CỔNG '
+2024-01-30 10:43:42,875 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'TRƯỜNG ĐẠI HỌC TÀI NGUYÊN VÀ MÔI TRƯỜNG - ĐƯỜNG TRƯỚC NHÀ VỈA '
+2024-01-30 10:43:42,875 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '... ',
+2024-01-30 10:43:42,876 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,876 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'CHỈ 17,9 TỶ. BÁN NHÀ MẶT PHỐ 6 TẦNG 70M2 MẶT TIỀN 6M HÈ RỘNG 5M KD '
+2024-01-30 10:43:42,876 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]           'SẦM UẤT TẤP NẬP.'}
+2024-01-30 10:43:42,876 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,876 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': 'Chính chủ bán số 11 ngõ 156 phố Mai Anh Tuấn, Hoàng Cầu, Đống '
+2024-01-30 10:43:42,877 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'Đa, gần hồ Hoàng Cầu.\r\n'
+2024-01-30 10:43:42,877 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'DT 48,8m2 x 4 tầng, mặt tiền 4,59m,\r\n'
+2024-01-30 10:43:42,877 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'Hướng Bắc, tổng 4 phòng ngủ và 4 vệ sinh, phòng bếp, khách, '
+2024-01-30 10:43:42,877 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'ngõ rộng, ô tô đỗ cửa. Dân trí cao, an... ',
+2024-01-30 10:43:42,877 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,877 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'CHÍNH CHỦ BÁN NHÀ SỐ 11 NGÕ 156 PHỐ MAI ANH TUẤN, HOÀNG CẦU, ĐỐNG '
+2024-01-30 10:43:42,878 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]           'ĐA.'}
+2024-01-30 10:43:42,878 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,878 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': '+ Khu vực kinh doanh nhộn nhịp phù hợp với nhiều loại hình '
+2024-01-30 10:43:42,878 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'kinh doanh như xây VP cho thuê nhu cầu lớn, kinh doanh làm mỹ '
+2024-01-30 10:43:42,878 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'phẩm, Spa, Showroom, giới thiệu sản phẩm…\r\n'
+2024-01-30 10:43:42,878 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '+ Nhà 2 mặt, mặt phố Nghĩa Tân và mặt ngõ  ô tô tải đỗ c... ',
+2024-01-30 10:43:42,879 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,879 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'Bán nhà mặt phố Nghĩa Tân, 1 mặt ngõ ô tô, 77m2, 3 tầng, mt 4.7m, '
+2024-01-30 10:43:42,879 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]           '28.5 tỷ'}
+2024-01-30 10:43:42,879 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,879 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': 'BÁN NHÀ MẶT PHỐ PHÚ DIỄN - QUẬN BẮC TỪ LIÊM - KHU VỰC KINH '
+2024-01-30 10:43:42,879 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'DOANH SẦM UẤT NGÀY ĐÊM.\r\n'
+2024-01-30 10:43:42,880 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '+ Diện tích 70m2 (trên sổ), 6 tầng, mặt tiền 5,6m, vỉa hè 5m, '
+2024-01-30 10:43:42,880 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'đường trước nhà rộng 20m, không lỗi phong thuỷ, nằm cách '
+2024-01-30 10:43:42,880 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'đường Hoàng Quốc ... ',
+2024-01-30 10:43:42,880 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,880 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'BÁN NHÀ MẶT PHỐ PHÚ DIỄN - QUẬN BẮC TỪ LIÊM - 6 TẦNG - MT 5,6M - DT '
+2024-01-30 10:43:42,880 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]           '70M2.'}
+2024-01-30 10:43:42,880 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,881 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': 'BÁN NHÀ GẤP NGÕ 75 PHỐ NGUYỄN XIỂN - QUẬN THANH XUÂN - 4 TẦNG '
+2024-01-30 10:43:42,881 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'VÀ 1 HẦM - VỪA Ở VÀ LÀM VĂN PHÒNG.\r\n'
+2024-01-30 10:43:42,881 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '+ Diện tích 55m2, 5 tầng và 1 hầm, mặt tiền 4,3m, lòng đường '
+2024-01-30 10:43:42,881 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '3 oto tránh, vỉa hè rộng, có hố chờ thang máy, đầy đủ giấy '
+2024-01-30 10:43:42,881 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'ph... ',
+2024-01-30 10:43:42,881 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,881 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'BÁN NHÀ NGÕ 75 PHỐ NGUYỄN XIỂN - 5 TẦNG - MT 4,3 - DT 55M2 - QUẬN '
+2024-01-30 10:43:42,882 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]           'THANH XUÂN.'}
+2024-01-30 10:43:42,882 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,882 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': 'Sổ đỏ chủ nhà đất như ảnh sổ đỏ ở tin đăng: Phạm Thu '
+2024-01-30 10:43:42,882 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'Trang.\r\n'
+2024-01-30 10:43:42,882 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '\r\n'
+2024-01-30 10:43:42,882 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '* Vị trí:\r\n'
+2024-01-30 10:43:42,883 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'Ngay cổng Phượng Đồng\r\n'
+2024-01-30 10:43:42,883 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'Cách bến xe Yên Nghĩa 3km.\r\n'
+2024-01-30 10:43:42,883 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'Cách cầu Mai Lĩnh của Phường Biên Giang - Hà Đông 1km.\r\n'
+2024-01-30 10:43:42,883 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'Cạnh ngay đại học Thể Dục Thể Thao.\r\n'
+2024-01-30 10:43:42,883 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'Ô ... ',
+2024-01-30 10:43:42,883 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,883 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'Nhà 3 tầng nhỉnh 1,38 tỷ mới xây gần Bến xe Yên Nghĩa - Hà Đông'}
+2024-01-30 10:43:42,884 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,884 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': '- HIẾM - LÔ GÓC - GIÁ ĐẦU TƯ.\r\n'
+2024-01-30 10:43:42,884 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '\r\n'
+2024-01-30 10:43:42,884 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '- Đất thuộc Khu B KĐT Yên Nghĩa đường Quang Trung Hà '
+2024-01-30 10:43:42,884 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'Đông. \r\n'
+2024-01-30 10:43:42,884 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '\r\n'
+2024-01-30 10:43:42,884 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '\r\n'
+2024-01-30 10:43:42,884 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '- Tặng bản thiết kế nhà dòng tiền 12phòng doanh thu '
+2024-01-30 10:43:42,884 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '45tr/th.\r\n'
+2024-01-30 10:43:42,884 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '- Phù hợp khách mua xây giữ tiền, hoặc mua ở, tiềm năng '
+2024-01-30 10:43:42,884 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'tăng... ',
+2024-01-30 10:43:42,885 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,885 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'Hơn 3tỷ Quang Trung Hà Đông thuộc Khu B KĐT Yên Nghĩa ngõ ô tô KD.'}
+2024-01-30 10:43:42,885 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,885 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': 'LÔ GÓC 2 THOÁNG - PHỐ THÁI THỊNH - GẦN THÁI HÀ - YÊN LÃNG - '
+2024-01-30 10:43:42,885 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'LÁNG - XÂY MỚI ĐẸP FULL NỘI THẤT - 50M RA PHỐ\r\n'
+2024-01-30 10:43:42,885 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '\r\n'
+2024-01-30 10:43:42,885 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '+ Bán nhà phố Thái Thịnh 33m2, 5 tầng, mặt tiền 3.6m, chào '
+2024-01-30 10:43:42,885 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '5.39 tỷ có TL.\r\n'
+2024-01-30 10:43:42,885 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '+ Thái Thịnh phố trung tâm quận Đống... ',
+2024-01-30 10:43:42,885 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,886 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'Bán nhà Thái Thịnh, Đống Đa, lô góc, mới tinh ở ngay, sổ nở hậu, '
+2024-01-30 10:43:42,886 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]           '33m2*5T'}
+2024-01-30 10:43:42,886 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,886 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': 'chủ cần bán trước Tết, Nhà Mặt phố Khuất Duy Tiến, Thanh '
+2024-01-30 10:43:42,886 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'Xuân, 70 m2, 8 tầng, thang máy, Lô Góc, 3 thoáng vĩnh viễn, '
+2024-01-30 10:43:42,886 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'nhỉnh 40 tỷ\r\n'
+2024-01-30 10:43:42,886 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '+ Toà nhà toạ lạc Mặt phố Khuất Duy Tiến, Vành Đai 3, Đây là '
+2024-01-30 10:43:42,886 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'trục đường huyết mạch, trung ... ',
+2024-01-30 10:43:42,886 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,886 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'chủ bán trước Tết, Nhà Mặt phố Khuất Duy Tiến, 70 m2, 8 tầng, Lô '
+2024-01-30 10:43:42,886 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]           'Góc, nhỉnh 40 tỷ'}
+2024-01-30 10:43:42,887 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,887 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': 'GÀ ĐẺ TRỨNG VÀNG - TOÀ CHDV 7 TẦNG THANG MÁY - FULL NỘI THẤT '
+2024-01-30 10:43:42,888 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '- BA ĐÌNH VIP - DÒNG TIỀN TRÊN 60TR/TH \r\n'
+2024-01-30 10:43:42,888 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '\r\n'
+2024-01-30 10:43:42,888 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '- Bán toà CHDV Thành Công, Ba Đình diện tích 48m2, 7 tầng '
+2024-01-30 10:43:42,888 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'thang máy, mặt tiền 5m, chào 8.35 tỷ có TL.\r\n'
+2024-01-30 10:43:42,888 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '\r\n'
+2024-01-30 10:43:42,888 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '- Chung cư ... ',
+2024-01-30 10:43:42,888 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,888 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'Hiếm! Toà CHDV Ba Đình, 7 tầng thang máy, 10 phòng khép kín full '
+2024-01-30 10:43:42,888 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]           'đồ, cho thuê 60 triệu/th'}
+2024-01-30 10:43:42,888 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,889 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': 'BÁN NHÀ NGÕ 89 LẠC LONG QUÂN  CẦU GIẤY OTO CÁCH 10M, NGÕ '
+2024-01-30 10:43:42,889 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'THÔNG TỨ TUNG SANG VÕ CHÍ CÔNG, THÔNG SỐ SỔ ĐỎ THỬA ĐẤT ĐẸP '
+2024-01-30 10:43:42,889 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'LUNG LINH DIỆN TÍCH 63 MÉT , 4 TẦNG MẶT TIỀN 6,3M GIÁ BÁN 150 '
+2024-01-30 10:43:42,889 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'TRIỆU MÉT  CHỈ CĂN DUY NHẤT... ',
+2024-01-30 10:43:42,889 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,889 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'BÁN NHÀ NGÕ 89 LẠC LONG QUÂN CẦU GIẤY THÔNG TỨ PHÍA 63M2 X 4T '
+2024-01-30 10:43:42,889 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]           'MT6,3M GIÁ CHỈ 150TR\\1M'}
+2024-01-30 10:43:42,889 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,889 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': 'NHÀ PHÂN LÔ - Ô TÔ TRÁNH VỈA HÈ - SỔ VUÔNG - Ở KINH DOANH VĂN '
+2024-01-30 10:43:42,890 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'PHÒNG SIÊU ĐỈNH...   + Vị trí trung tâm quận Cầu Giấy, khu '
+2024-01-30 10:43:42,890 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'phân lô Mạc Thái Tổ rất hiếm nhà bán, ô tô tránh, vỉa hè '
+2024-01-30 10:43:42,890 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'rộng, vài bước chân ra phố Trung Kính, Ngu... ',
+2024-01-30 10:43:42,890 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,890 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'Bán nhà phố Trung Kính, Mạc Thái Tổ, phân lô, ô tô, vỉa hè, 60m2, '
+2024-01-30 10:43:42,890 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]           'mặt tiền 5m, nhỉnh 17 tỷ'}
+2024-01-30 10:43:42,890 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,890 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': 'SIÊU PHẨM CỰC HOT\r\n'
+2024-01-30 10:43:42,890 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'Bán toà nhà Văn Phòng 200m*10 tầng cho thuê 3,8 tỷ /năm\r\n'
+2024-01-30 10:43:42,890 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'DC; số 42 ngõ 75 Nguyễn Xiển -Thanh Xuân- HN:\r\n'
+2024-01-30 10:43:42,890 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '\r\n'
+2024-01-30 10:43:42,891 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '-Nhà 2MT và mặt hồ - cách ngã tư Nguyễn Trãi 250m\r\n'
+2024-01-30 10:43:42,891 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '-NHÀ 10 tầng thang máy, dtxd 200m/sàn, 2 mặt... ',
+2024-01-30 10:43:42,891 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,891 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'HOT...Bán Nhà 200m2*10 tầng 2 MT-Mặt Hồ -đang cho thuê 3,2 tỷ '
+2024-01-30 10:43:42,891 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]           '/năm,ô tô,Tmay'}
+2024-01-30 10:43:42,891 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,891 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': '🆘 NGÃ TƯ 360 #XÃ_ĐÀN - #TRUNG_PHỤNG - CÁCH Ô TÔ GẦN - 5TẦNG '
+2024-01-30 10:43:42,891 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'SỊN MỊN - Ở LUÔN 🔥\r\n'
+2024-01-30 10:43:42,891 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '\r\n'
+2024-01-30 10:43:42,891 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '               👉 32,5m/26m - 5 tầng - mt 4m - 3,x t.ỷ\r\n'
+2024-01-30 10:43:42,891 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '\r\n'
+2024-01-30 10:43:42,891 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '✅ Nhà nằm trung tâm Đống Đa, khu vực phát triển mạnh bậc nhất '
+2024-01-30 10:43:42,891 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'Hà Nội. Ngõ nông... ',
+2024-01-30 10:43:42,892 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,892 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'Bán gấp nhà Trung Phụng 26m - 5 tầng - mt 4m 3,75 tỷ. Nhà mới, công '
+2024-01-30 10:43:42,892 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]           'năng hoàn hảo, ở luôn.'}
+2024-01-30 10:43:42,892 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://alonhadat.com.vn/nha-dat/can-ban/nha-dat/1/ha-noi.html>
+2024-01-30 10:43:42,892 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'description': 'ĐẸP, HIẾM - VIEW HỒ - ÔTÔ ĐỖ CỬA - AN SINH TUYỆT VỜI ,\r\n'
+2024-01-30 10:43:42,892 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 ',\r\n'
+2024-01-30 10:43:42,892 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 '+ Vị trí: Ngõ to kinh doanh sầm uất, ô tô đỗ cửa, view hồ, '
+2024-01-30 10:43:42,892 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'không gian trong lành, mát mẻ. Vài bước ra Chợ, trường học '
+2024-01-30 10:43:42,892 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]                 'mầm non, cấp 1, cấp 2, cấp 3 Khương Đình, A... ',
+2024-01-30 10:43:42,892 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'sdt': None,
+2024-01-30 10:43:42,892 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'title': 'LÀM GÌ CÓ CĂN THỨ 2. KHƯƠNG HẠ THANH XUÂN VIEW HỒ OTO VÀO NHÀ MT 7M '
+2024-01-30 10:43:42,892 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]           'GIÁ HƠN 8 TỈ'}
+2024-01-30 10:43:42,894 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.engine] INFO: Closing spider (finished)
+2024-01-30 10:43:42,894 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.extensions.feedexport] INFO: Stored json feed (20 items) in: output.json
+2024-01-30 10:43:42,895 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+2024-01-30 10:43:42,895 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] {'downloader/request_bytes': 269,
+2024-01-30 10:43:42,895 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'downloader/request_count': 1,
+2024-01-30 10:43:42,895 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'downloader/request_method_count/GET': 1,
+2024-01-30 10:43:42,895 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'downloader/response_bytes': 29842,
+2024-01-30 10:43:42,896 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'downloader/response_count': 1,
+2024-01-30 10:43:42,896 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'downloader/response_status_count/200': 1,
+2024-01-30 10:43:42,896 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'elapsed_time_seconds': 1.731965,
+2024-01-30 10:43:42,896 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'feedexport/success_count/FileFeedStorage': 1,
+2024-01-30 10:43:42,896 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'finish_reason': 'finished',
+2024-01-30 10:43:42,896 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'finish_time': datetime.datetime(2024, 1, 30, 3, 43, 42, 894671, tzinfo=datetime.timezone.utc),
+2024-01-30 10:43:42,896 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'httpcompression/response_bytes': 113923,
+2024-01-30 10:43:42,896 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'httpcompression/response_count': 1,
+2024-01-30 10:43:42,896 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'item_scraped_count': 20,
+2024-01-30 10:43:42,896 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'log_count/DEBUG': 22,
+2024-01-30 10:43:42,896 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'log_count/INFO': 11,
+2024-01-30 10:43:42,896 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'log_count/WARNING': 2,
+2024-01-30 10:43:42,896 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'memusage/max': 57229312,
+2024-01-30 10:43:42,896 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'memusage/startup': 57229312,
+2024-01-30 10:43:42,896 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'response_received_count': 1,
+2024-01-30 10:43:42,896 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scheduler/dequeued': 1,
+2024-01-30 10:43:42,897 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scheduler/dequeued/memory': 1,
+2024-01-30 10:43:42,897 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scheduler/enqueued': 1,
+2024-01-30 10:43:42,897 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'scheduler/enqueued/memory': 1,
+2024-01-30 10:43:42,897 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9]  'start_time': datetime.datetime(2024, 1, 30, 3, 43, 41, 162706, tzinfo=datetime.timezone.utc)}
+2024-01-30 10:43:42,897 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 2024-01-30 10:43:42 [scrapy.core.engine] INFO: Spider closed (finished)
+2024-01-30 10:43:44,041 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] Hello
+2024-01-30 10:43:44,041 INFO com.example.newapp.controll.WebsiteController [http-nio-8888-exec-9] 0
