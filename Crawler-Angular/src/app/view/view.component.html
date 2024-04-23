@@ -1,0 +1,65 @@
+<app-navigation></app-navigation>
+<div class="parent" *ngIf="loading">
+  <div class="loader child">
+    <div class="bar bar1"></div>
+    <div class="bar bar2"></div>
+    <div class="bar bar3"></div>
+  </div>
+</div>
+<div class="getTableStyle" *ngIf="!loading">
+  <div class="table">
+    <div class="header" style="height: 65px;">
+      <div class="sub-header" style="margin: 10px;">
+        <button class="button" style="padding: 10px; opacity: 0;" (click)="back()">
+          <i class="fa-solid fa-arrow-left color-gray-1" style="font-size: 24px;"></i>
+        </button>
+        <!-- <div class="heading-3">{{namePage}}</div> -->
+        <input class="input-search" type="text" style="width: 50%;" [(ngModel)]="input">
+        <button class="button" style="padding: 10px;" (click)="onInputChange()">
+          <i class="fa-solid fa-magnifying-glass" style="font-size: 24px;"></i>
+        </button>
+      </div>
+    </div>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th class="body-3 long-text-100">STT</th>
+          <th class="body-3 long-text-100">Publishing</th>
+          <th class="body-3 long-text-200">Title</th>
+          <th class="body-3 long-text-400">Detail</th>
+          <th class="body-3 long-text-100">Area</th>
+          <th class="body-3 long-text-100">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of views; let i = index" style="height: 125px;">
+          <td>
+            <div class="body-3 ta-center">{{item.date ? ((currentPage - 1) * amount + i + 1) : ''}}</div>
+          </td>
+          <td>
+            <div class="body-5 ta-center">{{item.date ? item.date.slice(0, 10) : ''}}</div>
+          </td>
+          <td>
+            <a href={{item.url}} target="_blank">
+              <div class="body-3" style="height: 105px; overflow-y: auto;">{{item.title ? item.title : item.url}}
+              </div>
+            </a>
+          </td>
+          <td>
+            <div class="body-5" style="height: 105px; overflow-y: auto;">{{item.detail}}</div>
+          </td>
+          <td>
+            <div class="body-5 ta-center">{{item.square}}</div>
+          </td>
+          <td>
+            <div class="body-5 ta-center">{{item.price}}</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="footer" style="height: 65px;">
+      <app-pagination *ngIf="condition" [fullData]="fullData" [amount]="amount"
+        (refresh)="refresh($event)"></app-pagination>
+    </div>
+  </div>
+</div>

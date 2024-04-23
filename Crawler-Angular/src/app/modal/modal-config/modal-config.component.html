@@ -1,0 +1,35 @@
+<form class="form-group" [formGroup]="formConfiguration">
+  <div class="w-100">
+    <div class="relative">
+      <label class="input-label-default color-gray-1" for="name">Name</label>
+      <input class="input-field body-4 w-100" type="text" id="name" formControlName="name" (keyup)="formatName()" />
+    </div>
+    <div class="error">{{statusName}}</div>
+  </div>
+  <div class="w-100">
+    <div class="relative">
+      <label class="input-label-default color-gray-1" for="url">Url</label>
+      <input class="input-field body-4 w-100" type="text" id="url" formControlName="url" (keyup)="formatUrl()" />
+    </div>
+    <div class="error">{{statusUrl}}</div>
+  </div>
+  <div class="w-100">
+    <div class="relative">
+      <label class="input-label-default color-gray-1" for="spider">Spider</label>
+      <input class="input-field body-4 w-100" type="text" id="spider" formControlName="spider" (click)="triggerFileInput()" readonly />
+      <div class="card-icons">
+        <button class="rec-green" style="width: 100px;"><label style="cursor: pointer;" for="fileInput">Choose File</label></button>
+      </div>
+    </div>
+    <div class="error">{{statusSpider}}</div>
+  </div>
+  <div>
+    <input style="display: none;" type="file" id="fileInput" (change)="onFileSelected($event)" />
+
+    <div class="clearfix" style="display: inline-flex; gap: 10px; height: 43px; align-items: center;">
+      <button class="rec-green hover" (click)="save()">Save</button>
+      <button class="rec-green hover" *ngIf="this.formConfiguration.value.id" (click)="delete()">Delete</button>
+      <button class="rec-green hover" (click)="back()" type="button">Back</button>
+    </div>
+  </div>
+</form>

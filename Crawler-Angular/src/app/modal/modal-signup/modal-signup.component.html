@@ -1,0 +1,41 @@
+<form class="form-group" [formGroup]="formSignup">
+    <div class="w-100">
+        <div class="relative">
+            <label class="input-label-default color-gray-1" for="email">Email</label>
+            <input class="input-field body-4 w-100" type="text" id="email" formControlName="email"
+                (keyup)="formatEmail()" />
+        </div>
+        <div class="error">{{statusEmail}}</div>
+    </div>
+    <div class="w-100">
+        <div class="relative">
+            <label class="input-label-default color-gray-1" for="username">Username</label>
+            <input class="input-field body-4 w-100" type="text" id="username" formControlName="username"
+                (keyup)="formatUsername()" />
+        </div>
+        <div class="error">{{statusUsername}}</div>
+    </div>
+    <div class="w-100">
+        <div class="relative">
+            <label class="input-label-default color-gray-1" for="user_role">Role</label>
+            <select class="input-field body-4 w-100 address" id="user_role" formControlName="user_role">
+                <option selected disabled hidden></option>
+                <option>Admin</option>
+                <option>User</option>
+            </select>
+            <div class="card-icons">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M8 10L12 14L16 10" stroke="#00214D" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="error">{{statusRole}}</div>
+    </div>
+    <div>
+        <div class="clearfix" style="display: inline-flex; gap: 10px; height: 43px; align-items: center;">
+            <button class="rec-green hover" (click)="signup()">Save</button>
+            <button class="rec-green hover" (click)="back()" type="button">Back</button>
+        </div>
+    </div>
+</form>

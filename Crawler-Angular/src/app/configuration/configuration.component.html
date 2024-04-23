@@ -1,0 +1,51 @@
+<app-navigation></app-navigation>
+<div class="getTableStyle">
+  <div class="table">
+    <div class="header" style="height: 65px;">
+      <div class="sub-header" style="margin: 10px;">
+        <button class="button" style="padding: 10px; opacity: 0;">
+          <i class="fa-solid fa-arrow-left color-gray-1" style="font-size: 24px;"></i>
+        </button>
+        <div class="heading-3">Configuration table</div>
+        <button class="button" style="padding: 10px;" (click)="create()">
+          <i class="fa-solid fa-plus color-gray-1" style="font-size: 24px;"></i>
+        </button>
+      </div>
+    </div>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th class="body-3 long-text-100">STT</th>
+          <th class="body-3 long-text-200">Website name</th>
+          <th class="body-3 long-text-500">Website url</th>
+          <th colspan="2"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of pages" style="height: 62.5px;">
+          <td>
+            <div class="body-3 ta-center">{{item.website_url ? item.index : ''}}</div>
+          </td>
+          <td>
+            <div class="body-3 ta-center">{{item.website_name}}</div>
+          </td>
+          <td>
+            <div class="body-5 ta-center">{{item.website_url}}</div>
+          </td>
+          <td class="ta-center long-text-100">
+            <button class="button button-hover button-1 color-gray-1 pri-button" style="padding: 8px 24px;"
+              (click)="navi(item.id)" *ngIf="item.website_url">Show</button>
+          </td>
+          <td class="ta-center long-text-100">
+            <button class="button button-hover button-1 color-gray-1 edit-button" style="padding: 8px 24px;"
+              (click)="config(item.id)" *ngIf="item.website_url">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="footer" style="height: 65px;">
+      <app-pagination *ngIf="condition" [fullData]="fullData" [amount]="amount"
+        (refresh)="refresh($event)"></app-pagination>
+    </div>
+  </div>
+</div>

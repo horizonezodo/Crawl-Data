@@ -1,0 +1,17 @@
+<div class="pagination">
+  <button *ngIf="curPage != 1" class="pag" (click)="firstPage()">«</button>
+  <button *ngIf="curPage != 1" class="pag" (click)="prevPage()">‹</button>
+  <div *ngIf="curPage == 1" style="width: 67px;"></div>
+
+  <button class="pag" [ngStyle]="{ 'color': 1 == curPage ? 'var(--primary-color)' : '', 'font-weight': 1 == curPage ? '600' : '', 'background-color': 1 == curPage ? 'var(--secondary-active-color)' : '' }" (click)="choosePage(1)">1</button>
+  <button class="pag" *ngIf="pageNumbers.length && !pageNumbers.includes(2)">...</button>
+  <button class="pag" *ngFor="let num of pageNumbers"
+    [ngStyle]="{ 'color': num == curPage ? 'var(--primary-color)' : '', 'font-weight': num == curPage ? '600' : '', 'background-color': num == curPage ? 'var(--secondary-active-color)' : '' }"
+    (click)="choosePage(num)">{{num}}</button>
+  <button class="pag" *ngIf="pageNumbers.length && !pageNumbers.includes(numOfPages - 1)">...</button>
+  <button class="pag" *ngIf="numOfPages != 1" [ngStyle]="{ 'color': numOfPages == curPage ? 'var(--primary-color)' : '', 'font-weight': numOfPages == curPage ? '600' : '', 'background-color': numOfPages == curPage ? 'var(--secondary-active-color)' : '' }" (click)="choosePage(numOfPages)">{{numOfPages}}</button>
+
+  <button *ngIf="curPage != numOfPages" class="pag" (click)="nextPage()">›</button>
+  <button *ngIf="curPage != numOfPages" class="pag" (click)="lastPage()">»</button>
+  <div *ngIf="curPage == numOfPages" style="width: 67px;"></div>
+</div>

@@ -1,0 +1,23 @@
+<div class="header">
+  <div class="nav-logo-mb-menu">
+    <img src="./assets/nextG.png" class="pointer" (click)="onClick('home')" />
+  </div>
+  <div class="nav-links">
+    <!-- <a>Tab 1</a>
+    <a>Tab 2</a>
+    <a>Tab 3</a>
+    <a>Tab 4</a>
+    <a>Tab 5</a> -->
+  </div>
+  <div class="nav-actions pointer" (click)="toggleSetting()" *ngIf="isTokenValid">
+    <img src={{img}} />
+    <div class="username">{{this.username}} <i class="fa-solid fa-chevron-down"></i></div>
+    <div id="nav-dropdown" class="dropdown-content">
+      <div (click)="onClick('home')"><a><i class="fa-solid fa-house"></i>  Home</a></div>
+      <div (click)="onClick('config')" *ngIf="role === 'Admin'"><a><i class="fa-solid fa-gear"></i>  Configuration</a></div>
+      <div (click)="onClick('accounts')" *ngIf="role === 'Admin'"><a><i class="fa-solid fa-user"></i>  Manager Account</a></div>
+      <div class="divider"></div>
+      <div (click)="logout()"><a><i class="fa-solid fa-right-from-bracket"></i>  Logout</a></div>
+    </div>
+  </div>
+</div>

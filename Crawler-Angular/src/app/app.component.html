@@ -1,0 +1,10 @@
+<router-outlet></router-outlet>
+
+<div class="modal" *ngIf="showModal" (click)="handleClose($event)">
+  <div class="modal-content">
+    <app-modal-config *ngIf="showModalConfig" (closeModal)="closeModal()"></app-modal-config>
+    <app-modal-signin *ngIf="showModalSignin" (closeModal)="closeModal()"></app-modal-signin>
+    <app-modal-signup *ngIf="showModalSignup" (closeModal)="closeModal()"></app-modal-signup>
+    <app-modal-new-password *ngIf="showModalNewPassword" (closeModal)="closeModal()"></app-modal-new-password>
+  </div>
+</div>
