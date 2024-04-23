@@ -1,0 +1,10 @@
+B1: Cài đặt python (recommend cài python version > 3.8)
+B2: Khởi tạo một môi trường ảo ( chon thư mục muốn tạo môi trường ảo -> chạy lệnh "python -m venv myenv" với windows còn với ubuntu thì chạy lệnh "python3 -m venv myenv")
+B3: Chạy môi trường ảo và ( với windows thì dùng lệnh "myenv\Scripts\activate" với ubuntu thì dùng "source myenv/bin/activate")
+B4: Cài scrapy vào môi trường ảo (chạy lệnh "pip install scrapy" với windows còn với ubuntu thì chạy lệnh "pip3 install scrapy")
+B5: Cài tomcat chon version >= 9 và jdk 11 cài maven và mysql
+B6: Vào mã nguồn và sửa các thứ trong folder properties và trong các controller sao cho phù hợp với bạn
+B7: Build file war từ mã nguồn (new app) chạy câu lệnh "$cd <đường dẫn tới file mã nguồn>" && "$ mvn clean package"  khi này file war được tạo ra lưu trong folder target
+B8: Coppy file war vừa được tạo ra vào thư mục webapps
+B9: Khởi chạy tomcat là xong 
+	
