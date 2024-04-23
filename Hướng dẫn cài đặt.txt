@@ -6,5 +6,8 @@ B5: Cài tomcat chon version >= 9 và jdk 11 cài maven và mysql
 B6: Vào mã nguồn và sửa các thứ trong folder properties và trong các controller sao cho phù hợp với bạn
 B7: Build file war từ mã nguồn (new app) chạy câu lệnh "$cd <đường dẫn tới file mã nguồn>" && "$ mvn clean package"  khi này file war được tạo ra lưu trong folder target
 B8: Coppy file war vừa được tạo ra vào thư mục webapps
-B9: Khởi chạy tomcat là xong 
+B9: Khởi chạy tomcat
+B10: Cài đặt nginx và sửa file config trong nginx sao cho phù hợp với bản thân
+B11: Build file angular và coppy toàn bộ thư mục dist trong project angular và đưa vào trong folder www trong nginx
+B12: Khởi chạy nginx
 	
