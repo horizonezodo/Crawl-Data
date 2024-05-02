@@ -9,9 +9,10 @@ import { TransferService } from './service/transfer.service';
 export class AppComponent {
   showModal: boolean = false;
   showModalConfig: boolean = false;
-  showModalSignin: boolean = false;
+  showModalDelete: boolean = false;
   showModalSignup: boolean = false;
   showModalNewPassword: boolean = false;
+  showModalCategory: boolean = false;
 
   constructor(private transferService: TransferService) {}
 
@@ -19,26 +20,29 @@ export class AppComponent {
     this.transferService.sharedData$.subscribe((data) => {
       this.showModal = data.showModal;
       this.showModalConfig = data.showModalConfig;
-      this.showModalSignin = data.showModalSignin;
+      this.showModalDelete = data.showModalDelete;
       this.showModalSignup = data.showModalSignup;
       this.showModalNewPassword = data.showModalNewPassword;
+      this.showModalCategory = data.showModalCategory;
     });
   }
 
   closeModal(): void {
     this.transferService.setShowModal(false);
     this.transferService.setShowModalConfig(false);
-    this.transferService.setShowModalSignin(false);
+    this.transferService.setShowModalDelete(false);
     this.transferService.setShowModalSignup(false);
+    this.transferService.setShowModalCategory(false);
     this.showModalNewPassword = false;
   }
 
   handleClose(event: MouseEvent): void {
-    if (!(event.target as HTMLElement).closest('.modal-content') && !this.showModalSignin && !this.showModalNewPassword) {
+    if (!(event.target as HTMLElement).closest('.modal-content') && !this.showModalDelete && !this.showModalNewPassword) {
       this.transferService.setShowModal(false);
       this.transferService.setShowModalConfig(false);
-      this.transferService.setShowModalSignin(false);
+      this.transferService.setShowModalDelete(false);
       this.transferService.setShowModalSignup(false);
+      this.transferService.setShowModalCategory(false);
       this.showModalNewPassword = false;
     }
   }

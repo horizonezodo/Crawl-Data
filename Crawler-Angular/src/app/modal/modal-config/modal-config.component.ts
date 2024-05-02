@@ -5,26 +5,31 @@ import { TransferService } from '../../service/transfer.service';
 
 @Component({
   selector: 'app-modal-config',
-  templateUrl: './modal-config.component.html',
-  styleUrls: ['./modal-config.component.css']
+  templateUrl: './modal-config.component.html'
 })
 export class ModalConfigComponent {
   @Output() closeModal = new EventEmitter<void>();
   id: number = 0;
   statusName: string = '';
   statusUrl: string = '';
+  statusCategory: string = '';
   statusSpider: string = '';
   formConfiguration: FormGroup = new FormGroup({
     id: new FormControl(),
     name: new FormControl(),
     url: new FormControl(),
     spider: new FormControl(),
+    category: new FormControl(),
   });
-  arr: string[] = ['name', 'url', 'spider'];
+  categoriesList: any = [];
+  arr: string[] = ['name', 'url', 'spider', 'category'];
   constructor(private apiService: ApiService,
     private transferService: TransferService) { }
 
   ngOnInit(): void {
+    this.apiService.getAllCategories().subscribe(response => {
+      this.categoriesList = response;
+    });
     this.transferService.sharedData$.subscribe((data) => {
       this.id = data.id;
     });
@@ -35,11 +40,17 @@ export class ModalConfigComponent {
         'name': response.name,
         'url': response.url,
         'spider': response.spider_url,
+        'category': response.type,
       });
+      this.check();
     });
   }
 
   ngDoCheck(): void {
+    this.check();
+  }
+
+  check(): void {
     this.arr.forEach(element => {
       const inputField = document.getElementById(element) as HTMLInputElement;
       const label = inputField.previousElementSibling as HTMLElement;
@@ -80,8 +91,6 @@ export class ModalConfigComponent {
   }
 
   triggerFileInput() {
-    // const file = document.getElementById('fileInput') as HTMLInputElement;
-    // file.click();
     document.getElementById('fileInput')?.click();
   }
 
@@ -89,10 +98,12 @@ export class ModalConfigComponent {
     this.formatName();
     this.formatUrl();
     this.formatSpider();
-    if (this.statusName || this.statusUrl || this.statusSpider) return;
+    this.formatCategory();
+    if (this.statusName || this.statusUrl || this.statusSpider || this.statusCategory) return;
     const formData: FormData = new FormData();
     formData.append('name', this.formConfiguration.value.name);
     formData.append('url', this.formConfiguration.value.url);
+    formData.append('type', this.formConfiguration.value.category);
     if (this.selectedFile) {
       formData.append('file', this.selectedFile, this.selectedFile.name);
       if (this.formConfiguration.value.id) {
@@ -100,20 +111,16 @@ export class ModalConfigComponent {
           // this.showModalSuccessfully = true;
           this.onload();
           this.closeModal.emit();
-          console.log('dung')
         }, () => {
           // this.showModalFailed = true;
-          console.log('sai')
         });
       } else {
         this.apiService.create(formData).subscribe(data => {
           // this.showModalSuccessfully = true;
           this.onload();
           this.closeModal.emit();
-          console.log('dung')
         }, () => {
           // this.showModalFailed = true;
-          console.log('sai')
         });
       }
     } else {
@@ -121,10 +128,8 @@ export class ModalConfigComponent {
         // this.showModalSuccessfully = true;
         this.onload();
         this.closeModal.emit();
-        console.log('dung')
       }, () => {
         // this.showModalFailed = true;
-        console.log('sai')
       });
     }
   }
@@ -144,22 +149,16 @@ export class ModalConfigComponent {
     } else this.statusUrl = '';
   }
 
+  formatCategory() {
+    if (!this.formConfiguration.value.category) {
+      this.statusCategory = 'Category is require';
+    } else this.statusCategory = '';
+  }
+
   formatSpider() {
     if (!this.formConfiguration.value.spider) {
       this.statusSpider = 'Spider is require';
     } else this.statusSpider = '';
-  }
-
-  delete() {
-    this.apiService.delete(this.formConfiguration.value.id).subscribe(data => {
-      // this.showModalSuccessfully = true;
-      this.onload();
-      this.closeModal.emit();
-      console.log('dung')
-    }, () => {
-      // this.showModalFailed = true;
-      console.log('sai')
-    });
   }
 
   back() {

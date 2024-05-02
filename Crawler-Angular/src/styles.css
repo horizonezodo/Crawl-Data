@@ -7,6 +7,7 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 * {
@@ -69,10 +70,30 @@ button {
     color: var(--neutral-grey-1, #616161);
 }
 
+.color-default {
+    color: var(--text-color-default, #33343E);
+}
+
+.color-gray-300 {
+    color: var(--neutral-300, #929BA2);
+}
+
 .heading-3 {
     font-size: 36px;
     font-weight: 600;
     line-height: 44px;
+}
+
+.heading-5 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+.heading-7 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
 }
 
 .button-1 {
@@ -96,6 +117,12 @@ button {
 .body-5 {
     font-size: 14px;
     font-weight: 500;
+    line-height: 20px;
+}
+
+.body-7 {
+    font-size: 14px;
+    font-weight: 400;
     line-height: 20px;
 }
 
@@ -139,12 +166,14 @@ button {
 
 .sub-header {
     display: flex;
+    gap: 5px;
     justify-content: space-between;
 }
 
 .styled-table {
     border-collapse: collapse;
     width: 100%;
+    min-height: calc(100vh - 295px);
 }
 
 .styled-table thead tr {
@@ -243,6 +272,7 @@ button {
 .input-search {
     padding: 10.5px;
     border-radius: 8px;
+    color: var(--layout-color);
 }
 
 .input-label {
@@ -262,8 +292,22 @@ button {
     font-size: 16px;
 }
 
+.poi {
+    border: none;
+    padding: 3px;
+    background: var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .1);
+}
+
+.button,
+.select {
+    color: var(--layout-color);
+}
+
 /* pagination */
-.pag {
+/* .pag,
+.select {
     min-width: 31px;
     height: 31px;
     border: none;
@@ -274,9 +318,7 @@ button {
 }
 
 .selected,
-.pag:hover,
-a:active,
-a:focus {
+.pag:hover {
     min-width: 43px;
     height: 43px;
     padding: 12px;
@@ -287,6 +329,36 @@ a:focus {
     height: 43px;
     padding: 12px;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
+} */
+
+.ant-pagination-item, .ant-pagination-prev, .ant-pagination-next, .select {
+    min-width: 31px !important;
+    height: 31px !important;
+    border: none !important;
+    padding: 2px !important;
+    background: var(--primary-color) !important;
+    border-radius: 8px !important;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .1) !important;
+}
+
+.ant-pagination-item:hover, .ant-pagination-prev:hover, .ant-pagination-next:hover {
+    min-width: 43px !important;
+    height: 43px !important;
+    padding: 7px !important;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5) !important;
+}
+
+.ant-pagination-item-active {
+    font-weight: 600 !important;
+    background-color: var(--secondary-active-color) !important;
+}
+
+.ant-pagination-item-active a, .ant-pagination-item-ellipsis {
+    color: var(--primary-color) !important;
+}
+
+.ant-pagination-prev button, .ant-pagination-next button {
+    border: none !important;
 }
 
 /* Spinner */
@@ -383,12 +455,13 @@ a:focus {
     background-color: var(--error-color);
 }
 
-.getTableStyle {
+/* .getTableStyle {
     padding-left: 150px;
     padding-right: 150px;
     position: absolute;
     transform: translateY(-50%);
     top: calc(50% + 40px);
+    width: -webkit-fill-available;
 }
 
 @media only screen and (max-height: 880px) {
@@ -399,11 +472,167 @@ a:focus {
         transform: translateY(0);
         top: 0;
     }
-}
+} */
 
 @media only screen and (max-width: 1024px) {
     .getTableStyle {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
     }
+}
+
+.getTableStyle {
+    padding: 20px 100px;
+    height: calc(100dvh - 80px);
+    overflow-y: auto;
+}
+
+.column {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.class-mobile {
+    height: calc(100% - 80px);
+}
+
+.class-scroll {
+    height: 100%;
+    width: 100%;
+    padding: 16px 16px;
+}
+
+/* Kiểu CSS cho màn hình desktop */
+@media only screen and (min-width: 768px) {
+
+    /* Đặt các kiểu CSS cho màn hình desktop ở đây */
+    .class-desktop {
+        display: block;
+    }
+
+    .class-mobile {
+        display: none;
+    }
+
+    .login-container {
+        max-width: 500px;
+    }
+}
+
+/* Kiểu CSS cho màn hình mobile */
+@media only screen and (max-width: 767px) {
+
+    /* Đặt các kiểu CSS cho màn hình mobile ở đây */
+    .class-desktop {
+        display: none;
+    }
+
+    .class-mobile {
+        display: flex;
+    }
+
+    .login-container {
+        max-width: 300px;
+    }
+
+    body {
+        background-color: #f7f7f7 !important;
+    }
+}
+
+.ant-descriptions-row>td,
+.ant-descriptions-row>th {
+    padding-bottom: 4px !important;
+}
+
+.button-up {
+    background-color: var(--layout-color);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+
+    /* top: -20px;
+    transform: translateX(-50%);
+    left: 50%; */
+    
+    display: flex;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20px;
+
+    cursor: pointer;
+}
+
+.ant-drawer-content-wrapper {
+    transition: transform .5s ease-in-out 0s, box-shadow .3s cubic-bezier(.23, 1, .32, 1) !important;
+}
+
+.scrollable-div {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.group-button {
+    display: flex;
+    height: 43px;
+}
+
+.group-button > * + * {
+    margin-left: 10px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.button-pay {
+    display: flex;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 8px;
+    background: var(--neutral-grey-3, #DEDEDE);
+}
+
+.button-pay-hover:hover {
+    background: var(--Secondary, #F58926);
+    color: var(--neutral-white, #FEFEFE);
+    cursor: pointer;
+}
+
+.verify {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.verifi {
+    color: blue;
+    cursor: pointer;
+}
+
+.card-icons {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 16px;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }

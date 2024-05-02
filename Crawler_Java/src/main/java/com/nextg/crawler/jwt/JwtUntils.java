@@ -1,5 +1,9 @@
 package com.nextg.crawler.jwt;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.JWTVerifier;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.nextg.crawler.service.UserDetailsImpl;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
@@ -10,6 +14,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.security.Key;
+import java.util.Base64;
 import java.util.Date;
 
 @Component
@@ -58,4 +63,25 @@ public class JwtUntils {
         }
         return false;
     }
+
+    public boolean verifyToken(String token) {
+        try {
+            Jws<Claims> claimsJwt = Jwts.parserBuilder().setSigningKey(key()).build().parseClaimsJws(token);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+//    public boolean verifyToken2(String token){
+//        try{
+//            byte[] decodeSecret = Base64.getDecoder().decode(SECRET);
+//            Algorithm algorithm = Algorithm.HMAC256(decodeSecret);
+//            JWTVerifier verifier = JWT.require(algorithm).build();
+//            verifier.verify(token);
+//            return true;
+//        }catch (JWTVerificationException exception){
+//            return false;
+//        }
+//    }
 }

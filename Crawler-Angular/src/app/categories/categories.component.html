@@ -1,0 +1,127 @@
+<app-navigation></app-navigation>
+<div class="class-desktop">
+  <div class="getTableStyle">
+    <div class="table">
+      <div class="header" style="height: 65px;">
+        <div class="sub-header" style="margin: 10px;">
+          <button class="button" style="padding: 10px; opacity: 0;">
+            <i class="fa-solid fa-arrow-left color-gray-1" style="font-size: 24px;"></i>
+          </button>
+          <div class="heading-3">Danh mục</div>
+          <button class="button" style="padding: 10px;" (click)="create()">
+            <i class="fa-solid fa-plus color-gray-1" style="font-size: 24px;"></i>
+          </button>
+        </div>
+      </div>
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th class="body-3 long-text-100">STT</th>
+            <th class="body-3 long-text-400">Tên</th>
+            <th class="body-3 long-text-300">Đường dẫn</th>
+            <th colspan="2"></th>
+          </tr>
+        </thead>
+        <tbody *ngIf="!loading">
+          <tr *ngFor="let item of fullData; let i = index" style="height: 62.5px;">
+            <td>
+              <div class="body-3 ta-center">{{item.categoryName ? ((currentPage - 1) * amount + i + 1) : ''}}</div>
+            </td>
+            <td>
+              <div class="body-5 ta-center">{{item.categoryName}}</div>
+            </td>
+            <td>
+              <div class="body-5 ta-center">{{item.path}}</div>
+            </td>
+            <td class="ta-center long-text-100">
+              <button class="button button-hover button-1 color-gray-1 edit-button" style="padding: 8px 24px;"
+                (click)="edit(item.id)" *ngIf="item.categoryName">Edit</button>
+            </td>
+            <td class="ta-center long-text-100">
+              <button class="button button-hover button-1 color-gray-1 delete-button" style="padding: 8px 24px;"
+                (click)="delete(item.id)" *ngIf="item.categoryName">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot class="parent" *ngIf="loading">
+          <div class="loader child">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+          </div>
+        </tfoot>
+      </table>
+      <div class="footer" style="height: 65px;">
+        <div class="sub-header" style="margin: 10px; align-items: center; justify-content: center;">
+          <nz-pagination *ngIf="totalPages > 1" [nzPageIndex]="currentPage" [nzTotal]="totalElements"
+            (nzPageIndexChange)="refresh($event)"></nz-pagination>
+          <select *ngIf="totalElements >= 50" class="select" style="cursor: pointer;" [(ngModel)]="amount"
+            (change)="handleSelected()">
+            <option>50</option>
+            <option *ngIf="totalElements >= 100">100</option>
+            <option *ngIf="totalElements >= 200">200</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="class-mobile">
+  <div class="class-scroll">
+    <div #scrollableDiv class="scrollable-div" (scroll)="onScroll()" *ngIf="!loading">
+      <div nz-row [nzGutter]="[{ xs: 8, sm: 16, md: 24, lg: 32 }, { xs: 8, sm: 16, md: 24, lg: 32 }]">
+        <div nz-col class="gutter-row" [nzXs]="24" [nzSm]="12" *ngFor="let item of fullData">
+          <nz-card style="width: 100%; border-radius: 8px;" [nzTitle]="titleTemplate" *ngIf="item.categoryName"
+            [nzActions]="[actionEdit, actionDelete]">
+            <nz-descriptions>
+              <nz-descriptions-item [nzTitle]="iconName">{{item.categoryName}}</nz-descriptions-item>
+              <nz-descriptions-item [nzTitle]="iconPath">{{item.path}}</nz-descriptions-item>
+            </nz-descriptions>
+          </nz-card>
+          <ng-template #titleTemplate>
+            <a>
+              <div class="body-3" style="white-space: pre-wrap;" (click)="onClick(item.path)">{{item.categoryName}}
+              </div>
+            </a>
+          </ng-template>
+          <ng-template #iconName>
+            <div style="width: 30px;">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+          </ng-template>
+          <ng-template #iconPath>
+            <div style="width: 30px;">
+              <i class="fa-solid fa-link"></i>
+            </div>
+          </ng-template>
+          <ng-template #actionEdit>
+            <span nz-icon nzType="edit" (click)="editMobile(item.id)" *ngIf="item.categoryName"></span>
+          </ng-template>
+          <ng-template #actionDelete>
+            <span nz-icon nzType="delete" nzTheme="outline" (click)="deleteMobile(item.id)"
+              *ngIf="item.categoryName"></span>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+    <div class="parent" *ngIf="loading">
+      <div class="loader child">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+      </div>
+    </div>
+  </div>
+  <div class="relative">
+    <div class="button-up" (click)="createMobile()" (touchstart)="createMobile()">
+      <i class="fa-solid fa-caret-left" style="position: absolute; font-size: 20px; color: white; left: 6px;"></i>
+    </div>
+  </div>
+  <nz-drawer nzHeight="fit-content" [nzClosable]="false" [nzVisible]="visible" nzPlacement="right" nzWidth="75%"
+    (nzOnClose)="close()">
+    <ng-container *nzDrawerContent>
+      <app-modal-category *ngIf="action === 'form'" (closeModal)="close()"></app-modal-category>
+      <app-modal-delete *ngIf="action === 'delete'" (closeModal)="close()"></app-modal-delete>
+    </ng-container>
+  </nz-drawer>
+</div>

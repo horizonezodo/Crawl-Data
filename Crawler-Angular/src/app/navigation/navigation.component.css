@@ -1,6 +1,5 @@
 /* Nội dung dropdown */
 .dropdown-content {
-    display: none;
     border-radius: 3px;
     position: absolute;
     background-color: var(--layout-color);
@@ -23,10 +22,14 @@
     background-color: var(--secondary-color);
 }
 
+.header-wp {
+    width: -webkit-fill-available;
+    height: 80px;
+}
 
 /* Tung VL */
 .header {
-    width: stretch;
+    width: -webkit-fill-available;
     position: fixed;
     z-index: 10;
     padding: 15px 150px;

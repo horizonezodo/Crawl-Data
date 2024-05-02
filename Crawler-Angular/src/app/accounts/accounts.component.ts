@@ -1,60 +1,70 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ApiService } from '../service/api.service';
 import { TransferService } from '../service/transfer.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-accounts',
-  templateUrl: './accounts.component.html',
-  styleUrl: './accounts.component.css'
+  templateUrl: './accounts.component.html'
 })
 export class AccountsComponent {
-  accounts: any;
-  amount: number = 10;
-  fullDataOrigin: any;
+  loading: boolean = false;
   fullData: any;
-  condition: boolean = false;
+  amount: number = 10;
+
+  totalPages: number = 0;
+  totalElements: number = 0;
+  currentPage: number = 1;
+
+  visible = false;
+  action: string = '';
 
   private subscription?: Subscription;
 
   constructor(private apiService: ApiService,
-    private transferService: TransferService) { }
+    private transferService: TransferService,
+    private router: Router,
+    private elementRef: ElementRef) { }
 
   ngOnInit(): void {
     this.onload();
     this.subscription = this.transferService.callReload$.subscribe(() => {
+      this.currentPage = 1;
       this.onload();
     });
   }
 
   onload(): void {
-    this.apiService.getAccounts().subscribe(response => {
-      this.fullDataOrigin = response.map((item: any, index: number) => {
-        return {
-          index: index + 1,
-          ...item
-        };
-      });
-
-      let elToAdd = this.fullDataOrigin.length % this.amount ? this.amount - (this.fullDataOrigin.length % this.amount) : 0;
-      this.fullDataOrigin = [
-        ...this.fullDataOrigin,
-        ...Array.from({ length: elToAdd }, () => ({}))
-      ]
-      this.condition = true;
-      this.fullData = this.fullDataOrigin;
-      this.refresh(1);
+    this.apiService.getAccounts(this.currentPage - 1, this.amount).subscribe(response => {
+      this.totalPages = response.totalPages;
+      this.totalElements = response.totalElements;
+      this.fullData = response.content;
     }, () => {
-      this.fullDataOrigin = Array.from({ length: this.amount }, () => ({}));
-      this.fullData = this.fullDataOrigin;
-      this.refresh(1);
+      this.fullData = Array.from({ length: this.amount }, () => ({}));
     });
   }
 
+  open(): void {
+    this.visible = true;
+  }
+
+  close(): void {
+    this.visible = false;
+  }
+
+  handleSelected(): void {
+    this.currentPage = 1;
+    this.onload();
+  }
+  
+  onClick(navi: string) {
+    this.router.navigate(['/' + navi]);
+  }
+
   refresh(curPage: number): void {
-    let start = (curPage - 1) * this.amount;
-    let end = start + this.amount;
-    this.accounts = this.fullData.slice(start, end);
+    this.currentPage = curPage;
+    this.onload();
   }
 
   edit(id: string): void {
@@ -63,15 +73,55 @@ export class AccountsComponent {
     this.transferService.setShowModalSignup(true);
   }
 
+  editMobile(id: string): void {
+    this.transferService.setIdSignup(parseInt(id));
+    this.action = 'form';
+    this.open();
+  }
+
   create() {
     this.transferService.setIdSignup(0);
     this.transferService.setShowModal(true);
     this.transferService.setShowModalSignup(true);
   }
 
+  createMobile(): void {
+    this.transferService.setIdSignup(0);
+    this.action = 'form';
+    this.open();
+  }
+
   delete(id: number) {
-    this.apiService.deleteAccount(id).subscribe(response => {
-      this.onload();
-    });
+    this.transferService.setIdSignup(id);
+    this.transferService.setShowModal(true);
+    this.transferService.setShowModalDelete(true);
+    this.transferService.setDeleteFor('account');
+  }
+
+  deleteMobile(id: number) {
+    this.transferService.setIdSignup(id);
+    this.transferService.setDeleteFor('account');
+    this.action = 'delete';
+    this.open();
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(): void {
+    const scrollableDiv = this.elementRef.nativeElement.querySelector('.scrollable-div');
+    if (scrollableDiv.scrollTop + scrollableDiv.clientHeight >= scrollableDiv.scrollHeight) {
+      // console.log('Bạn đã cuộn đến cuối cùng của thẻ div!');
+      // Gọi hàm hoặc thực hiện hành động mong muốn ở đây
+      const currentScrollPosition = scrollableDiv.scrollHeight;
+      this.currentPage = this.currentPage + 1;
+      // this.onload();
+      this.apiService.getPages(this.currentPage - 1, this.amount).subscribe(response => {
+        this.fullData = this.fullData.concat(response.content);
+      }, () => { });
+
+      scrollableDiv.scrollTo({
+        top: currentScrollPosition,
+        behavior: 'auto'
+      });
+    }
   }
 }

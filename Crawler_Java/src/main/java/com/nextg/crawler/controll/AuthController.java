@@ -96,8 +96,9 @@ public class AuthController {
                 .map(RefreshToken::getUser)
                 .map(acc -> {
                     String token = untils.generateTokenFromEmail(acc.getEmail());
+                    RefreshToken newRefreshTOken = refreshService.updateRefreshToken(request.getRefreshToken());
                     log.info("refresh token Success : " + token);
-                    return ResponseEntity.ok(new RefreshTokenResponse(token, requestRefreshToken));
+                    return ResponseEntity.ok(new RefreshTokenResponse(token, newRefreshTOken.getToken()));
                 })
                 .orElseThrow(() -> new TokenRefreshException(requestRefreshToken,
                         "810"));
@@ -136,10 +137,16 @@ public class AuthController {
 
     @PostMapping("/check-Token")
     public ResponseEntity<?> checkToken(@RequestBody checkTokenRequest request){
-        if (untils.validateJwtToken(request.getToken())){
-            return new ResponseEntity<>(HttpStatus.OK);
+        if (untils.verifyToken(request.getToken())){
+            CheckTokenResponse res = new CheckTokenResponse();
+            res.setStatus(true);
+            log.info("Token valid");
+            return new ResponseEntity<>(res, HttpStatus.OK);
         }
-        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        CheckTokenResponse res = new CheckTokenResponse();
+        res.setStatus(false);
+        log.info("Token invalid" + request.getToken());
+        return new ResponseEntity<>(res, HttpStatus.OK);
     }
 
     @PostMapping("/send-mail-change-pass")

@@ -1,55 +1,131 @@
 <app-navigation></app-navigation>
-<div class="getTableStyle">
-  <div class="table">
-    <div class="header" style="height: 65px;">
-      <div class="sub-header" style="margin: 10px;">
-        <button class="button" style="padding: 10px; opacity: 0;">
-          <i class="fa-solid fa-arrow-left color-gray-1" style="font-size: 24px;"></i>
-        </button>
-        <div class="heading-3">Account table</div>
-        <button class="button" style="padding: 10px;" (click)="create()">
-          <i class="fa-solid fa-plus color-gray-1" style="font-size: 24px;"></i>
-        </button>
+<div class="class-desktop">
+  <div class="getTableStyle">
+    <div class="table">
+      <div class="header" style="height: 65px;">
+        <div class="sub-header" style="margin: 10px;">
+          <button class="button" style="padding: 10px; opacity: 0;">
+            <i class="fa-solid fa-arrow-left color-gray-1" style="font-size: 24px;"></i>
+          </button>
+          <div class="heading-3">Tài khoản</div>
+          <button class="button" style="padding: 10px;" (click)="create()">
+            <i class="fa-solid fa-plus color-gray-1" style="font-size: 24px;"></i>
+          </button>
+        </div>
+      </div>
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th class="body-3 long-text-100">STT</th>
+            <th class="body-3 long-text-300">Username</th>
+            <th class="body-3 long-text-300">Email</th>
+            <th class="body-3 long-text-100">Role</th>
+            <th colspan="2"></th>
+          </tr>
+        </thead>
+        <tbody *ngIf="!loading">
+          <tr *ngFor="let item of fullData; let i = index" style="height: 62.5px;">
+            <td>
+              <div class="body-3 ta-center">{{item.email ? ((currentPage - 1) * amount + i + 1) : ''}}</div>
+            </td>
+            <td>
+              <div class="body-5 ta-center">{{item.username}}</div>
+            </td>
+            <td>
+              <div class="body-5 ta-center">{{item.email}}</div>
+            </td>
+            <td>
+              <div class="body-5 ta-center">{{item.user_role}}</div>
+            </td>
+            <td class="ta-center long-text-100">
+              <button class="button button-hover button-1 color-gray-1 edit-button" style="padding: 8px 24px;"
+                (click)="edit(item.id)" *ngIf="item.email">Edit</button>
+            </td>
+            <td class="ta-center long-text-100">
+              <button class="button button-hover button-1 color-gray-1 delete-button" style="padding: 8px 24px;"
+                (click)="delete(item.id)" *ngIf="item.email && item.user_role.toLowerCase() !== 'admin'">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot class="parent" *ngIf="loading">
+          <div class="loader child">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+          </div>
+        </tfoot>
+      </table>
+      <div class="footer" style="height: 65px;">
+        <div class="sub-header" style="margin: 10px; align-items: center; justify-content: center;">
+          <nz-pagination *ngIf="totalPages > 1" [nzPageIndex]="currentPage" [nzTotal]="totalElements"
+            (nzPageIndexChange)="refresh($event)"></nz-pagination>
+          <select *ngIf="totalElements >= 50" class="select" style="cursor: pointer;" [(ngModel)]="amount"
+            (change)="handleSelected()">
+            <option>50</option>
+            <option *ngIf="totalElements >= 100">100</option>
+            <option *ngIf="totalElements >= 200">200</option>
+          </select>
+        </div>
       </div>
     </div>
-    <table class="styled-table">
-      <thead>
-        <tr>
-          <th class="body-3 long-text-100">STT</th>
-          <th class="body-3 long-text-300">Username</th>
-          <th class="body-3 long-text-300">Email</th>
-          <th class="body-3 long-text-100">Role</th>
-          <th colspan="2"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of accounts" style="height: 62.5px;">
-          <td>
-            <div class="body-3 ta-center">{{item.email ? item.index : ''}}</div>
-          </td>
-          <td>
-            <div class="body-5 ta-center">{{item.username}}</div>
-          </td>
-          <td>
-            <div class="body-5 ta-center">{{item.email}}</div>
-          </td>
-          <td>
-            <div class="body-5 ta-center">{{item.user_role}}</div>
-          </td>
-          <td class="ta-center long-text-100">
-            <button class="button button-hover button-1 color-gray-1 edit-button" style="padding: 8px 24px;"
-              (click)="edit(item.id)" *ngIf="item.email">Edit</button>
-          </td>
-          <td class="ta-center long-text-100">
-            <button class="button button-hover button-1 color-gray-1 delete-button" style="padding: 8px 24px;"
-              (click)="delete(item.id)" *ngIf="item.email && item.user_role.toLowerCase() !== 'admin'">Delete</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="footer" style="height: 65px;">
-      <app-pagination *ngIf="condition" [fullData]="fullData" [amount]="amount"
-        (refresh)="refresh($event)"></app-pagination>
+  </div>
+</div>
+<div class="class-mobile">
+  <div class="class-scroll">
+    <div #scrollableDiv class="scrollable-div" (scroll)="onScroll()" *ngIf="!loading">
+      <div nz-row [nzGutter]="[{ xs: 8, sm: 16, md: 24, lg: 32 }, { xs: 8, sm: 16, md: 24, lg: 32 }]">
+        <div nz-col class="gutter-row" [nzXs]="24" [nzSm]="12" *ngFor="let item of fullData">
+          <nz-card style="width: 100%; border-radius: 8px;" [nzTitle]="titleTemplate" *ngIf="item.email"
+            [nzActions]="[actionEdit, actionDelete]">
+            <nz-descriptions>
+              <nz-descriptions-item [nzTitle]="iconEmail">{{item.email}}</nz-descriptions-item>
+              <nz-descriptions-item [nzTitle]="iconRole">{{item.user_role}}</nz-descriptions-item>
+            </nz-descriptions>
+          </nz-card>
+          <ng-template #titleTemplate>
+            <a>
+              <div class="body-3" style="white-space: pre-wrap;">{{item.username}}</div>
+            </a>
+          </ng-template>
+          <ng-template #iconEmail>
+            <div style="width: 30px;">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+          </ng-template>
+          <ng-template #iconRole>
+            <div style="width: 30px;">
+              <i class="fa-solid fa-user-tie" *ngIf="item.user_role.toLowerCase() === 'admin'"></i>
+              <i class="fa-regular fa-user" *ngIf="item.user_role.toLowerCase() !== 'admin'"></i>
+            </div>
+          </ng-template>
+          <ng-template #actionEdit>
+            <span nz-icon nzType="edit" (click)="editMobile(item.id)" *ngIf="item.email"></span>
+          </ng-template>
+          <ng-template #actionDelete>
+            <span nz-icon nzType="delete" nzTheme="outline" (click)="deleteMobile(item.id)"
+              *ngIf="item.email && item.user_role.toLowerCase() !== 'admin'"></span>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+    <div class="parent" *ngIf="loading">
+      <div class="loader child">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+      </div>
     </div>
   </div>
+  <div class="relative">
+    <div class="button-up" (click)="createMobile()" (touchstart)="createMobile()">
+      <i class="fa-solid fa-caret-left" style="position: absolute; font-size: 20px; color: white; left: 6px;"></i>
+    </div>
+  </div>
+  <nz-drawer nzHeight="fit-content" [nzClosable]="false" [nzVisible]="visible" nzPlacement="right" nzWidth="75%"
+    (nzOnClose)="close()">
+    <ng-container *nzDrawerContent>
+      <app-modal-signup *ngIf="action === 'form'" (closeModal)="close()"></app-modal-signup>
+      <app-modal-delete *ngIf="action === 'delete'" (closeModal)="close()"></app-modal-delete>
+    </ng-container>
+  </nz-drawer>
 </div>

@@ -27,6 +27,9 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.*;
 import java.nio.file.*;
 import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 import javax.mail.MessagingException;
 import javax.persistence.EntityManager;
@@ -288,11 +291,11 @@ public class WebsiteController {
                         latestDate = null;
                     }
                     log.info(latestDate);
-                   
+
                     String[] command = {
                             "/bin/bash",
                             "-c",
-                            "cd "+AppConfig.scrapyWorkDir+" && source "+AppConfig.pythonEnviromentFolder+"/bin/activate && scrapy runspider " + website.getSpider_url() + " -a pass_date_str='" + latestDate + "' --logfile="+AppConfig.scrapyWorkDir+"/file_log.txt"};
+                            "cd "+AppConfig.scrapyWorkDir+" && source "+AppConfig.pythonEnviromentFolder+"/bin/activate && scrapy runspider " + website.getSpider_url() + " -a pass_date_str='" + latestDate + "' --logfile="+AppConfig.scrapyWorkDir+"/"+getOutputFile(website.getSpider_url())+".txt"};
                     Process process = Runtime.getRuntime().exec(command);
                     log.info("Start crawl");
                     BufferedReader errorReader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
@@ -360,11 +363,117 @@ public class WebsiteController {
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
-    @GetMapping("/all")
+
+    @GetMapping("/all2")
+    public ResponseEntity<?> CrawlAllData2() throws IOException, InterruptedException {
+        log.info("Run Job");
+        try {
+            List<Website> li = webRepo.findAll();
+            ExecutorService executor = Executors.newFixedThreadPool(5); // Tạo hồ bơi luồng với 5 luồng
+            log.info("Khởi tạo luồng ");
+            for (Website website : li) {
+                executor.submit(() -> { // Gửi một tác vụ mới cho hồ bơi luồng
+                    log.info("Gửi tác vụ tới luồng");
+                    String script_load_data_file_path = website.getSpider_url();
+                    log.info(script_load_data_file_path);
+                    if (script_load_data_file_path.endsWith(".py")) {
+                        try {
+                            String latestDate = getLatestDate(website.getType(), website.getWebsite_url());
+                            latestDate = latestDate.replace(" ", "T");
+                            log.info(latestDate);
+                            String fileLogName = getOutputFile(website.getSpider_url());
+                            String[] command = {
+                                    "/bin/bash",
+                                    "-c",
+                                    "cd "+AppConfig.scrapyWorkDir+" && source "+AppConfig.pythonEnviromentFolder+"/venv/bin/activate && scrapy runspider " + website.getSpider_url() + " -a pass_date_str='" + latestDate + "' --logfile="+AppConfig.scrapyWorkDir+"/"+fileLogName+".txt"};
+                            log.info("Starting crawler with website " + website.getSpider_url());
+                            ProcessBuilder processBuilder = new ProcessBuilder(command);
+                            processBuilder.redirectErrorStream(true);
+                            Process process = processBuilder.start();
+                            int exitCode = process.waitFor();
+                            log.info(String.valueOf(exitCode));
+
+                            if (exitCode == 0) {
+                                InputStream inputStream = process.getInputStream();
+                                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+                                String line;
+                                while ((line = bufferedReader.readLine()) != null) {
+                                    System.out.println(line);
+                                    log.info(line);
+                                }
+                                String outputFile = AppConfig.resultFolderWorkDir + getOutputFile(website.getSpider_url()) + ".json";
+                                log.info(outputFile);
+                                transferData(website.getType(), outputFile);
+                            }
+                        } catch (IOException | InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+            }
+            executor.shutdown();
+            log.info("Thoát luồng hiện tại");
+            try {
+                if (!executor.awaitTermination(180, TimeUnit.MINUTES)) { // Chờ tất cả các tác vụ hoàn thành trong vòng 180 phút
+                    log.info("Hết thời gian chờ đợi tự động đóng luồng");
+                    executor.shutdownNow(); // Hủy tất cả các tác vụ đang chờ và đang chạy nếu chúng không hoàn thành trong thời gian đã định
+                }
+            } catch (InterruptedException e) {
+                log.info("Luồng gặp lỗi tự động thoát luồng lỗi gặp phải : " + e.getMessage());
+                executor.shutdownNow();
+            }
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+        log.error("Run python script code in cmd Fail : ");
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    }
+
+    @GetMapping("/test")
     public ResponseEntity<?> CrawlAllData() throws IOException, InterruptedException {
         log.info("Run Job");
         try {
             List<Website> li = webRepo.findAll();
+            ExecutorService executor = Executors.newFixedThreadPool(5); // Tạo hồ bơi luồng với 5 luồng
+            log.info("Khởi tạo luồng ");
+            for (Website website : li) {
+                executor.submit(() -> { // Gửi một tác vụ mới cho hồ bơi luồng
+                    log.info(website.getSpider_url());
+                    String script_load_data_file_path = website.getSpider_url();
+                    log.info(script_load_data_file_path);
+                });
+            }
+
+            executor.shutdownNow();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @GetMapping("/all")
+    public ResponseEntity<?> crawlData() throws IOException, InterruptedException {
+        List<Website> li = webRepo.findAll();
+        int bathSize = 3;
+        for (int i = 0; i < li.size(); i+= bathSize) {
+            List<Website> batch = new ArrayList<>();
+            int end = Math.min(i + bathSize, li.size());
+            for(int j = i; j < end; j++) {
+                batch.add(li.get(j));
+            }
+            ProcessSpider(batch);
+        }
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+
+    public void ProcessSpider(List<Website> listWebsite) throws IOException, InterruptedException {
+        try {
+            List<Website> li =listWebsite;
+            String commandText = "";
             for (Website website : li) {
                 String script_load_data_file_path = website.getSpider_url();
                 log.info(script_load_data_file_path);
@@ -372,65 +481,97 @@ public class WebsiteController {
                     String latestDate = getLatestDate(website.getType(), website.getWebsite_url());
                     latestDate = latestDate.replace(" ", "T");
                     log.info(latestDate);
-                    String[] command = {
-                            "/bin/bash",
-                            "-c",
-                            "cd "+AppConfig.scrapyWorkDir+" && source "+AppConfig.pythonEnviromentFolder+"/venv/bin/activate && scrapy runspider " + website.getSpider_url() + " -a pass_date_str='" + latestDate + "' --logfile="+AppConfig.scrapyWorkDir+"/file_log.txt"};
-                    Process process = Runtime.getRuntime().exec(command);
-                    int exitCode = process.waitFor();
-                    log.info(String.valueOf(exitCode));
-
-                    if (exitCode == 0) {
-                        InputStream inputStream = process.getInputStream();
-                        InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-
-                        String line;
-                        while ((line = bufferedReader.readLine()) != null) {
-                            System.out.println(line);
-                            log.info(line);
-                        }
-                        String outputFile = AppConfig.resultFolderWorkDir +getOutputFile(website.getSpider_url())+".json";
-                        log.info(outputFile);
-
-                        if(website.getType().equalsIgnoreCase("bds")){
-                            ObjectMapper objectMapper = new ObjectMapper();
-                            log.info("Transfer Data to website descriptions");
-                            List<WebsiteDescription> websites = objectMapper.readValue(new File(outputFile),
-                                    objectMapper.getTypeFactory().constructCollectionType(List.class, WebsiteDescription.class));
-                            List<WebsiteDescription> emptyPriceValue =  dataRepo.findAllByContainingPrice("thỏa thuận");
-                            dataRepo.deleteAll(emptyPriceValue);
-                            dataRepo.saveAll(websites);
-
-                        }
-                        else if(website.getType().equalsIgnoreCase("auto")){
-                            ObjectMapper objectMapper = new ObjectMapper();
-                            log.info("Transfer Data to car descriptions");
-                            List<CarDescription> cars = objectMapper.readValue(new File(outputFile),
-                                    objectMapper.getTypeFactory().constructCollectionType(List.class, CarDescription.class));
-                            List<CarDescription> emptyPriceValue = carRepo.findAllByContainingPrice("thỏa thuận");
-                            carRepo.deleteAll(emptyPriceValue);
-                            carRepo.saveAll(cars);
-
-                        }
-                        else if(website.getType().equalsIgnoreCase("stock")){
-                            ObjectMapper objectMapper = new ObjectMapper();
-                            log.info("Transfer Data to stock descriptions");
-                            List<StockDescription> stocks = objectMapper.readValue(new File(outputFile),
-                                    objectMapper.getTypeFactory().constructCollectionType(List.class, StockDescription.class));
-                            stockRepo.saveAll(stocks);
-
-                        }
+                    String fileLogName = getOutputFile(website.getSpider_url());
+                    commandText += "scrapy runspider " + website.getSpider_url() +" -a pass_date_str='" + latestDate + "' --logfile="+AppConfig.scrapyWorkDir+"/"+fileLogName+".txt &";
                     }
                 }
+            String[] command = {
+                    "/bin/bash",
+                    "-c",
+                    "cd "+AppConfig.scrapyWorkDir+" && source "+AppConfig.pythonEnviromentFolder+"/venv/bin/activate && " + commandText };
+            Process process = Runtime.getRuntime().exec(command);
+            int exitCode = process.waitFor();
+            log.info(String.valueOf(exitCode));
+
+            if (exitCode == 0) {
+                InputStream inputStream = process.getInputStream();
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+                String line;
+                while ((line = bufferedReader.readLine()) != null) {
+                    System.out.println(line);
+                    log.info(line);
+                }
+                for(Website item: li){
+                    String outputFile = AppConfig.resultFolderWorkDir +getOutputFile(item.getSpider_url())+".json";
+                    if(item.getType().equalsIgnoreCase("bds")){
+                        ObjectMapper objectMapper = new ObjectMapper();
+                        log.info("Transfer Data to website descriptions");
+                        List<WebsiteDescription> websites = objectMapper.readValue(new File(outputFile),
+                                objectMapper.getTypeFactory().constructCollectionType(List.class, WebsiteDescription.class));
+                        dataRepo.saveAll(websites);
+                        log.info("Save to website descriptions");
+                    }
+                    else if(item.getType().equalsIgnoreCase("auto")){
+                        ObjectMapper objectMapper = new ObjectMapper();
+                        log.info("Transfer Data to car descriptions");
+                        List<CarDescription> cars = objectMapper.readValue(new File(outputFile),
+                                objectMapper.getTypeFactory().constructCollectionType(List.class, CarDescription.class));
+                        carRepo.saveAll(cars);
+                        log.info("Save to car descriptions");
+                    }
+                    else if(item.getType().equalsIgnoreCase("stock")){
+                        ObjectMapper objectMapper = new ObjectMapper();
+                        log.info("Transfer Data to stock descriptions");
+                        List<StockDescription> stocks = objectMapper.readValue(new File(outputFile),
+                                objectMapper.getTypeFactory().constructCollectionType(List.class, StockDescription.class));
+                        stockRepo.saveAll(stocks);
+                        log.info("save stock descriptions");
+                    }
+                    log.info(outputFile);
+                }
             }
-            return new ResponseEntity<>(HttpStatus.OK);
+            log.info("Chạy xong tất cả các file spider");
+
         }catch(Exception e){
             e.printStackTrace();
+            log.error("Run python script code in cmd Fail : " + e.getMessage());
         }
-        log.error("Run python script code in cmd Fail : ");
-        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+
     }
+
+    public void transferData(String type, String outputFile){
+        try{
+            if(type.equalsIgnoreCase("bds")){
+                ObjectMapper objectMapper = new ObjectMapper();
+                log.info("Transfer Data to website descriptions");
+                List<WebsiteDescription> websites = objectMapper.readValue(new File(outputFile),
+                        objectMapper.getTypeFactory().constructCollectionType(List.class, WebsiteDescription.class));
+                dataRepo.saveAll(websites);
+                log.info("Save to website descriptions");
+            }
+            else if(type.equalsIgnoreCase("auto")){
+                ObjectMapper objectMapper = new ObjectMapper();
+                log.info("Transfer Data to car descriptions");
+                List<CarDescription> cars = objectMapper.readValue(new File(outputFile),
+                        objectMapper.getTypeFactory().constructCollectionType(List.class, CarDescription.class));
+                carRepo.saveAll(cars);
+                log.info("Save to car descriptions");
+            }
+            else if(type.equalsIgnoreCase("stock")){
+                ObjectMapper objectMapper = new ObjectMapper();
+                log.info("Transfer Data to stock descriptions");
+                List<StockDescription> stocks = objectMapper.readValue(new File(outputFile),
+                        objectMapper.getTypeFactory().constructCollectionType(List.class, StockDescription.class));
+                stockRepo.saveAll(stocks);
+                log.info("save stock descriptions");
+            }
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public String getLatestDate(String type, String url) throws IOException {
         if(type.equalsIgnoreCase("bds")){
@@ -491,4 +632,8 @@ public class WebsiteController {
         log.info(filename);
         return filename;
     }
+
+//    public boolean remaneFileLog(String oldUrl){
+//        String newUrl = AppConfig.
+//    }
 }

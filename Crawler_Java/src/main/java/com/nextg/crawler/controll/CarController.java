@@ -59,7 +59,7 @@ public class CarController {
                     String[] command = {
                             "/bin/bash",
                             "-c",
-                            "cd "+ AppConfig.scrapyWorkDir +" && source "+AppConfig.pythonEnviromentFolder+"/bin/activate && scrapy runspider " + website.getSpider_url() + " -a pass_date_str='" + latestDate + "' --logfile="+AppConfig.scrapyWorkDir+"/file_log.txt"};
+                            "cd "+AppConfig.scrapyWorkDir+" && source "+AppConfig.pythonEnviromentFolder+"/bin/activate && scrapy runspider " + website.getSpider_url() + " -a pass_date_str='" + latestDate + "' --logfile="+AppConfig.scrapyWorkDir+"/"+getOutputFile(website.getSpider_url())+".txt"};
                     Process process = Runtime.getRuntime().exec(command);
                     log.info("crawl data");
                     log.info("scrapy runspider " + website.getSpider_url());

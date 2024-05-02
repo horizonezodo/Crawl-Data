@@ -52,7 +52,7 @@ public class StockController {
                     String[] command = {
                             "/bin/bash",
                             "-c",
-                            "cd "+ AppConfig.scrapyWorkDir +" && source "+AppConfig.pythonEnviromentFolder+"/bin/activate && scrapy runspider " + website.getSpider_url() + " -a pass_date_str='" + latestDate + "' --logfile="+AppConfig.scrapyWorkDir+"/file_log.txt"};
+                            "cd "+AppConfig.scrapyWorkDir+" && source "+AppConfig.pythonEnviromentFolder+"/bin/activate && scrapy runspider " + website.getSpider_url() + " -a pass_date_str='" + latestDate + "' --logfile="+AppConfig.scrapyWorkDir+"/"+getOutputFile(website.getSpider_url())+".txt"};
                     Process process = Runtime.getRuntime().exec(command);
                     log.info("Run scrawler stock website");
                     log.info("scrapy runspider " + website.getSpider_url());
@@ -155,13 +155,5 @@ public class StockController {
         return filename;
     }
 
-    @GetMapping("/auth/test-add-data")
-    public ResponseEntity<?> addDataaForStock() throws IOException {
-        log.info("Tiêns hành truyền dữ liệu từ file ra object ");
-        ObjectMapper objectMapper = new ObjectMapper();
-        List<StockDescription> stockList = objectMapper.readValue(new File("/opt/apache-tomcat-9.0.87/result/data.json"),
-                objectMapper.getTypeFactory().constructCollectionType(List.class, StockDescription.class));
-        stockRepo.saveAll(stockList);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
+
 }

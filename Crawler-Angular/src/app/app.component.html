@@ -3,8 +3,8 @@
 <div class="modal" *ngIf="showModal" (click)="handleClose($event)">
   <div class="modal-content">
     <app-modal-config *ngIf="showModalConfig" (closeModal)="closeModal()"></app-modal-config>
-    <app-modal-signin *ngIf="showModalSignin" (closeModal)="closeModal()"></app-modal-signin>
+    <app-modal-delete *ngIf="showModalDelete" (closeModal)="closeModal()"></app-modal-delete>
     <app-modal-signup *ngIf="showModalSignup" (closeModal)="closeModal()"></app-modal-signup>
-    <app-modal-new-password *ngIf="showModalNewPassword" (closeModal)="closeModal()"></app-modal-new-password>
+    <app-modal-category *ngIf="showModalCategory" (closeModal)="closeModal()"></app-modal-category>
   </div>
 </div>

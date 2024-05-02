@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ApiService } from 'src/app/service/api.service';
-import { AuthService } from 'src/app/service/auth.service';
-import { TransferService } from 'src/app/service/transfer.service';
+import { AuthService } from '../../service/auth.service';
+import { ApiService } from '../../service/api.service';
+import { TransferService } from '../../service/transfer.service';
 
 @Component({
   selector: 'app-modal-signup',
@@ -74,7 +74,14 @@ export class ModalSignupComponent {
     this.formatUsername();
     this.formatRole();
     if (this.statusEmail || this.statusUsername || this.statusRole) return;
-    this.authService.registerEmail(this.formSignup.value).subscribe(data => {
+    let api;
+    if (this.idAccount) {
+      api = this.apiService.editAccount(this.formSignup.value, this.idAccount)
+    } else {
+      api = this.authService.registerEmail(this.formSignup.value)
+    }
+    api.subscribe(data => {
+      this.onload();
       this.closeModal.emit();
     }, error => { })
   }
@@ -102,5 +109,9 @@ export class ModalSignupComponent {
 
   back() {
     this.closeModal.emit();
+  }
+
+  onload() {
+    this.transferService.callReload();
   }
 }

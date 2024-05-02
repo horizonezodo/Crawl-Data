@@ -6,41 +6,73 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalConfigComponent } from './modal/modal-config/modal-config.component';
 import { TransferService } from './service/transfer.service';
-import { PaginationComponent } from './pagination/pagination.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { ModalSigninComponent } from './modal/modal-signin/modal-signin.component';
 import { Auth_interceptor } from './service/auth_interceptor';
 import { ModalSignupComponent } from './modal/modal-signup/modal-signup.component';
 import { LandingComponent } from './landing/landing.component';
-import { ModalNewPasswordComponent } from './modal/modal-new-password/modal-new-password.component';
-import { NotFoundComponent } from './not-found/not-found.component';
 import { AccountsComponent } from './accounts/accounts.component';
-import { HomeComponent } from './home/home.component';
-import { ViewComponent } from './view/view.component';
+import { BdsAllComponent } from './data/bdsAll/bdsAll.component';
+import { BdsDetailComponent } from './data/bdsDetail/bdsDetail.component';
+import { AutoAllComponent } from './data/autoAll/autoAll.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
+import { ModalDeleteComponent } from './modal/modal-delete/modal-delete.component';
+import { AutoDetailComponent } from './data/autoDetail/autoDetail.component';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzPaginationModule } from 'ng-zorro-antd/pagination';
+import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
+import { NzDrawerModule } from 'ng-zorro-antd/drawer';
+import { CategoriesComponent } from './categories/categories.component';
+import { ModalCategoryComponent } from './modal/modal-category/modal-category.component';
+import { FormNewPasswordComponent } from './modal/form-new-password/form-new-password.component';
+import { FormSignInComponent } from './modal/form-sign-in/form-sign-in.component';
+import { StockAllComponent } from './data/stockAll/stockAll.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ViewComponent,
+    BdsAllComponent,
+    BdsDetailComponent,
+    AutoAllComponent,
+    AutoDetailComponent,
+    StockAllComponent,
     ConfigurationComponent,
     ModalConfigComponent,
-    ModalSigninComponent,
+    ModalDeleteComponent,
     ModalSignupComponent,
-    ModalNewPasswordComponent,
-    PaginationComponent,
+    ModalCategoryComponent,
     NavigationComponent,
     LandingComponent,
     AccountsComponent,
-    NotFoundComponent
+    CategoriesComponent,
+    FormNewPasswordComponent,
+    FormSignInComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NzButtonModule,
+    NzIconModule,
+    NzDividerModule,
+    NzGridModule,
+    NzCardModule,
+    NzPaginationModule,
+    NzCheckboxModule,
+    NzInputModule,
+    NzRadioModule,
+    NzSelectModule,
+    NzDescriptionsModule,
+    NzDrawerModule
   ],
   providers: [
     {

@@ -1,12 +1,14 @@
 package com.nextg.crawler.jwt;
 
 import com.nextg.crawler.service.UserDetailsServiceImpl;
+import io.jsonwebtoken.JwtException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -43,7 +45,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
             if(jwt == null){
                 filterChain.doFilter(request, response);
             }
-            if (jwt != null && jwtUtils.validateJwtToken(jwt)) {
+            else if (jwt != null && jwtUtils.validateJwtToken(jwt) && jwtUtils.verifyToken(jwt)) {
                 String email = jwtUtils.getEmailFromJwtToken(jwt);
 
                 UserDetails userDetails = userDetailsService.loadUserByUsername(email);
@@ -58,8 +60,23 @@ public class AuthTokenFilter extends OncePerRequestFilter {
                 SecurityContextHolder.getContext().setAuthentication(authentication);
                 filterChain.doFilter(request, response);
             }
+            else{
+                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                response.getWriter().write("Unauthorized: Invalid token");
+                return;
+            }
+        } catch (JwtException e) {
+            logger.error("JWT exception: {}", e.getMessage());
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            response.getWriter().write("Unauthorized: Invalid token");
+        } catch (UsernameNotFoundException e) {
+            logger.error("User not found: {}", e.getMessage());
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            response.getWriter().write("Unauthorized: User not found");
         } catch (Exception e) {
-            logger.error("Cannot set user authentication: {}", e);
+            logger.error("Error processing authentication: {}", e.getMessage());
+            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            response.getWriter().write("Internal server error");
         }
     }
 }

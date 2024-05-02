@@ -42,6 +42,18 @@ public class RefreshTokenServiceImpl {
         return refreshToken;
     }
 
+    public RefreshToken updateRefreshToken(String token){
+        Optional<RefreshToken> opt = repo.findByToken(token);
+        if(opt.isPresent()){
+            RefreshToken refreshToken = opt.get();
+            refreshToken.setToken(UUID.randomUUID().toString());
+            refreshToken = repo.save(refreshToken);
+            log.info("update refresh token success : " );
+            return refreshToken;
+        }
+        return null;
+    }
+
     public RefreshToken verifyExpiration(RefreshToken token) {
         if (token.getExpiryDate().compareTo(Instant.now()) < 0) {
             repo.delete(token);

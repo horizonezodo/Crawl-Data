@@ -18,26 +18,25 @@ export class AuthGuard implements CanActivate {
 
     const token = this.tokenService.getToken();
     const refreshToken = this.tokenService.getRefreshToken();
-    const role = this.tokenService.getUserRole();
-    const url = state.url;
+    // const role = this.tokenService.getUserRole();
+    // const url = state.url;
 
-    if (token && (role === 'Admin' || (url !== '/accounts' && url !== '/config'))) {
+    // if (token && (role.toLowerCase() === 'admin' || (url !== '/accounts' && url !== '/config'))) {
+      if (token) {
       // Gọi hàm kiểm tra tính hợp lệ của token và cập nhật giá trị của isTokenValid
       return this.authService.checkTokenValidity(token).pipe(
         map(data => {
-          this.tokenService.setTokenValid(true);
           return true;
         }),
         catchError(error => {
           return this.authService.refreshToken(refreshToken).pipe(
             map(data => {
               this.tokenService.setToken(data.token);
-              this.tokenService.setTokenValid(true);
               return true;
             }),
             catchError(refreshError => {
               localStorage.clear();
-              this.router.navigate(['/']);
+              this.router.navigate(['/login']);
               return of(false);
             })
           );
@@ -45,7 +44,7 @@ export class AuthGuard implements CanActivate {
       );
     } else {
       localStorage.clear();
-      this.router.navigate(['/']);
+      this.router.navigate(['/login']);
       return of(false);
     }
   }
